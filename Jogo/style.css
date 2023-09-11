@@ -1,0 +1,1368 @@
+.line-full {
+  height: 5rem;
+  width: 100%;
+}
+
+.header-container-jogo {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: grid;
+  grid-template-columns: 40% 1fr 1fr 1fr;
+  grid-template-rows: 1rem 1fr 3rem 3rem;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    ". . . ."
+    "title title av1 av2"
+    "if1 . av1 av2"
+    "if2 if2 if2 if2";
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: linear-gradient(550deg, #0f0f0f, #00ff88);
+  background-size: 1921px 1080px;
+  box-shadow: 0 0 2rem 0 black;
+}
+
+.title-header {
+  grid-area: title;
+  font-size: 1.8rem;
+  padding-left: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.avaliacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  padding-top: 10%;
+}
+
+.jogo-information {
+  padding-left: 2.2rem;
+  font-size: 1rem;
+}
+
+#av1 {
+  grid-area: av1;
+}
+
+#av1 p {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+#av1 img {
+  height: 3rem;
+  width: 3rem;
+  padding-right: 0.4rem;
+  padding-bottom: 0.25rem;
+}
+
+#av2 {
+  grid-area: av2;
+}
+
+#av2 img {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding-right: 0.4rem;
+}
+
+#av2 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#av2 p {
+  padding-top: 0.25rem;
+}
+
+#if1 {
+  grid-area: if1;
+  display: flex;
+  align-items: center;
+  color: rgb(177, 177, 177);
+}
+
+#if2 {
+  grid-area: if2;
+  display: flex;
+  align-items: center;
+  color: rgb(177, 177, 177);
+}
+
+.js-player {
+  width: 50rem;
+  height: 25rem;
+}
+
+.js-player::poster {
+  width: 100%;
+  height: auto;
+}
+
+.body-container-jogo {
+  display: grid;
+  margin-top: 0.8rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template-columns: 25% 50% 1fr;
+  grid-template-rows: 19rem 19rem;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "img video img1"
+    "img video img2";
+  background: linear-gradient(550deg, #0f0f0f, #00ff88);
+  background-size: 1921px 1080px;
+  row-gap: 1rem;
+  box-shadow: 0 0 2rem 0 black;
+}
+
+.img-principal {
+  grid-area: img;
+  display: flex;
+}
+
+#img-prin {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  border-bottom-left-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  position: relative;
+}
+
+.img-principal button {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  border: none;
+  background: none;
+}
+
+.fav {
+  width: 100%;
+  height: 90%;
+  cursor: pointer;
+}
+
+.fav2 {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Define a animação de opacidade */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Aplica a animação à imagem quando a classe for adicionada */
+.fadeOut {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+.video {
+  grid-area: video;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#video-play {
+  width: 100%;
+  height: 96%;
+  position: relative;
+}
+
+.video a {
+  position: absolute;
+}
+
+#play-img {
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
+}
+
+#play-img:hover {
+  transform: scale(1.2);
+}
+
+.img-jogo1 {
+  grid-area: img1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+}
+
+.img-jogo1 span {
+  height: 95.6%;
+  width: 95%;
+  overflow: hidden;
+  border-top-right-radius: 1.5rem;
+}
+
+.img-jogo1 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 1.5rem;
+}
+
+.img-jogo2 {
+  grid-area: img2;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.img-jogo2 img {
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.img-jogo2 span {
+  height: 96%;
+  width: 95%;
+  overflow: hidden;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.img-secundaria {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.img-secundaria:hover {
+  transform: scale(1.1);
+}
+
+/* abrir imagem */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lightbox-imagem {
+  display: block;
+  height: 60%;
+  width: 60%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  transform: scale(0.6);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.lightbox.ativo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.fechar {
+  color: white;
+  font-size: 6rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.fechar-imagem {
+  width: 60%;
+  height: 3.5rem;
+  background: linear-gradient(550deg, #0f0f0f, #00ff88);
+  background-size: 1921px 1080px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transform: scale(0.6);
+  transition: transform 0.3s;
+  z-index: 9999;
+}
+
+/* Estilos para as miniaturas */
+.thumbnail {
+  cursor: pointer;
+}
+
+.footer-container-jogo {
+  display: grid;
+  margin-top: 0.8rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template-columns: 70% 1fr;
+  grid-template-rows: 5rem 1fr 5rem 5rem;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "genero avaliar"
+    "resumo avaliar"
+    "developer button2"
+    "curiosidade button2";
+  background: linear-gradient(550deg, #0f0f0f, #00ff88);
+  background-size: 1921px 1080px;
+  box-shadow: 0 0 2rem 0 black;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.generos {
+  grid-area: genero;
+  display: flex;
+  padding-left: 2.2rem;
+  align-items: center;
+}
+
+.generos p {
+  border: 0.1rem solid white;
+  border-radius: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.resumo {
+  grid-area: resumo;
+  padding-left: 2.2rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  border-top: 0.1rem solid gray;
+  border-bottom: 0.1rem solid gray;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.resumo p {
+  max-width: 95%;
+}
+
+.developer {
+  grid-area: developer;
+  padding-left: 2.2rem;
+  border-bottom: 0.1rem solid gray;
+  display: flex;
+  align-items: center;
+}
+
+.developer p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+.developer span,
+.curiosidade span {
+  color: #00ff88;
+  font-weight: bolder;
+}
+
+.curiosidade {
+  grid-area: curiosidade;
+  padding-left: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.curiosidade p {
+  max-width: 95%;
+}
+
+.button {
+  grid-area: avaliar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.button button {
+  background: none;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #00ff88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+
+.button button:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+  color: white;
+}
+
+.button p {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  color: rgba(191, 250, 163, 0.692);
+  padding-top: 1rem;
+}
+
+.button2 {
+  grid-area: button2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button2 img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.button2 a {
+  border-radius: 1rem;
+  border: 0.1rem solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.button2 a:hover {
+  background-color: rgba(255, 255, 255, 0.233);
+  color: white;
+}
+
+#av3 {
+  display: none;
+}
+
+#explorer {
+  display: flex;
+}
+
+.explore-more {
+  max-width: 120rem;
+  margin-top: 3rem;
+  margin-left: 5%;
+}
+
+#explore2 {
+  display: none;
+}
+
+.card-explore {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title-explore {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin-bottom: 1.4rem;
+}
+
+.title-explore span,
+.title-explore2 span {
+  color: #00ff88;
+}
+
+.title-explore2 {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.cards {
+  width: 17rem;
+  margin-bottom: 20px;
+  background-color: gray;
+  height: 100%;
+  box-shadow: 0 0 0.8rem 0.01rem #00ff88;
+  border-radius: 1rem;
+  background: linear-gradient(550deg, #0f0f0f, #0c3f27);
+  background-size: 1921px 1080px;
+  transition: 0.1s ease-in-out;
+}
+
+.cards:hover {
+  opacity: 0.8;
+}
+
+/* #novos-cards{
+  width: 24.2%;
+  height: auto;
+} */
+
+.cards img {
+  height: 67%;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom: 0.2rem solid #00ff887e;
+}
+
+.title-cards {
+  display: flex;
+}
+
+.cards h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  padding-left: 0.7rem;
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#bolt {
+  width: 2rem;
+  height: 3rem;
+  border: none;
+}
+
+.notas-cards {
+  display: flex;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 0.2rem;
+}
+
+.cards a {
+  text-decoration: none;
+  background: none;
+  border: 0.1rem solid white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 1rem;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: white;
+  margin-top: 1rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.cards a:hover {
+  background: rgba(128, 128, 128, 0.452);
+}
+
+#add-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+}
+
+#star-cards {
+  width: 2rem;
+  height: 3rem;
+  border: none;
+  padding-right: 0.5rem;
+}
+
+.notas-cards p {
+  display: flex;
+  align-items: center;
+}
+
+#loading {
+  margin-top: 1.8rem;
+  padding: 0.8rem 3rem;
+  background: none;
+  border: 0.1rem solid white;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 3rem;
+  width: 20rem;
+}
+
+#loading:hover {
+  background: rgba(255, 255, 255, 0.082);
+}
+
+#loading-animation {
+  display: none;
+  margin-top: 1rem;
+}
+
+#loading-animation img {
+  width: 12rem;
+  height: 12rem;
+}
+
+#explorer-lateral {
+  margin-right: 5%;
+  display: flex;
+  margin-top: 3rem;
+}
+
+#line-side {
+  display: flex;
+  flex-direction: column;
+  width: 0.1rem;
+  height: 100%;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+}
+.cards-side {
+  grid-area: lateral;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-side a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 3rem;
+}
+
+.cards-side a:hover {
+  color: #00ff88;
+}
+
+.cards-side h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: rgb(185, 177, 177);
+  background: linear-gradient(360deg, rgb(29, 6, 26), rgba(128, 0, 128, 0.603));
+  width: 98%;
+  text-align: center;
+  padding: 0.5rem 0.2rem;
+  transition: 0.2s ease-in-out;
+}
+
+#steam {
+  background: linear-gradient(360deg, rgb(29, 6, 26), rgba(0, 70, 128, 0.603));
+}
+#nexus {
+  background: linear-gradient(360deg, rgb(29, 6, 26), rgba(128, 73, 0, 0.603));
+}
+#critic {
+  background: linear-gradient(360deg, rgb(29, 6, 26), rgba(128, 126, 0, 0.603));
+}
+
+.cards-side a:hover h3 {
+  color: white;
+}
+
+.cards-side a:hover > .random-images {
+  opacity: 1;
+}
+
+.random-images {
+  width: 98%;
+  height: 20rem;
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+}
+
+.imgs-side {
+  width: 32%;
+  height: 12rem;
+  position: relative;
+  opacity: 70%;
+}
+
+.list-icon {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  margin-top: -4rem;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  font-weight: bold;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.list-icon img {
+  width: 3rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+#last-a {
+  margin-bottom: 0;
+}
+
+.cards-mobile {
+  display: none;
+}
+
+#comentar {
+  display: flex;
+  align-items: center;
+}
+
+#comentar input {
+  width: 100%;
+  height: 2.4rem;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border: none;
+  border-bottom: 0.1rem solid #00ff88;
+  background: none;
+  color: white;
+  font-size: 1.6rem;
+  transition: 0.2s ease-in-out;
+}
+
+#corpo-comentarios {
+  width: 90%;
+}
+
+#corpo-comentarios input:focus {
+  outline: none;
+  border-bottom: 0.2rem solid white;
+}
+
+form {
+  max-width: 80rem;
+}
+
+.botaoDoLike {
+  display: none;
+}
+
+#ocult-submit {
+  height: 2.7rem;
+  display: flex;
+  justify-content: right;
+  display: none;
+}
+
+#ocult-submit input,
+#ocult-submit button {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 0.1rem solid white;
+  background: none;
+  color: #00ff88;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  transition: 0.1s ease-in-out;
+  margin-left: 1rem;
+}
+
+#ocult-submit input:hover,
+#ocult-submit button:hover {
+  background: rgba(255, 255, 255, 0.219);
+}
+
+.enviarComentario {
+  opacity: 0.2;
+}
+
+#cancelar {
+  border: none;
+  color: white;
+}
+
+.img-usuario {
+  width: 5.5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-image: url("avatar/avatar.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#imgSecundaria1 {
+  display: none;
+}
+
+#imgSecundaria2 {
+  display: none;
+}
+
+.comentarios-adicioandos {
+  margin-top: 3rem;
+  width: 90%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
+
+.comentarios-dentro {
+  width: 90%;
+  word-wrap: break-word;
+  margin-left: 1rem;
+}
+
+.comentarios-dentro h4 {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.buttons-comentarios {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+.like_deslike {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like_deslike img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.buttons-comentarios button {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2.4rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.like_deslike:hover {
+  background: rgba(255, 255, 255, 0.096);
+  border-radius: 50%;
+}
+
+.buttons-comentarios p {
+  color: white;
+  margin-left: 0.7rem;
+}
+
+.comentarios-dentro span {
+  font-size: 1.4rem;
+}
+
+.comentarios-dentro p {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  color: white;
+}
+
+#Espaco-Final {
+  height: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .explore-more {
+    width: 60%;
+  }
+  #explorer-lateral {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title-header {
+    font-size: 1.2rem;
+  }
+
+  .avaliacao {
+    font-size: 0.8rem;
+  }
+
+  .jogo-information {
+    font-size: 0.8rem;
+  }
+
+  .button2 a {
+    font-size: 1.4rem;
+  }
+
+  .body-container-jogo {
+    grid-template-columns: 30% 40% 1fr;
+    grid-template-rows: 15rem 15rem;
+  }
+
+  .img-jogo1 span {
+    height: 95%;
+  }
+
+  .img-jogo2 span {
+    height: 94.1%;
+  }
+
+  .img-principal button {
+    height: 8rem;
+    margin-top: 0.1%;
+  }
+
+  .cards h2 {
+    overflow: hidden;
+    font-size: 1.3rem;
+  }
+
+  #bolt {
+    height: 1.5rem;
+    width: 2rem;
+  }
+
+  .notas-cards p {
+    font-size: 1.5rem;
+  }
+
+  #star-cards {
+    width: 2rem;
+    height: 3rem;
+    padding-left: 0.2rem;
+  }
+
+  .cards img {
+    height: 56%;
+  }
+
+  .card-explore {
+    height: 22rem;
+    column-gap: 1.4rem;
+  }
+
+  .cards a {
+    font-size: 1.2rem;
+  }
+
+  #add-button {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .explore-more {
+    grid-template-rows: 7rem 1fr 5rem;
+    width: 64%;
+  }
+
+  .title-explore2 h2 {
+    font-size: 1.4rem;
+  }
+
+  #explorer-lateral {
+    width: 55%;
+  }
+
+  .list-icon {
+    font-size: 1.4rem;
+  }
+
+  .list-icon img {
+    width: 2rem;
+  }
+
+  .title-explore h2 {
+    font-size: 1.7rem;
+  }
+
+  .cards {
+    width: 13rem;
+  }
+
+  #line-side {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .title-cards h2 {
+    padding-left: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+
+  .notas-cards {
+    padding-left: 0.5rem;
+  }
+
+  #loading {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+    width: 15rem;
+  }
+
+  .comentarios-dentro {
+    width: 84%;
+  }
+
+  .adress-mobile {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) { 
+ .header-container-jogo {
+    grid-template-areas:
+      ". . . ."
+      "title title title title"
+      "if1 . . ."
+      "if2 if2 if2 if2";
+  }
+
+  .img-principal button {
+    height: 7rem;
+    margin-top: 0.2rem;
+  }
+
+  #av1,
+  #av2 {
+    display: none;
+  }
+
+  .body-container-jogo {
+    display: grid;
+    margin-top: 0.8rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: 40% 50% 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "img video video";
+
+    row-gap: 0;
+  }
+
+  #img-prin {
+    padding-right: 0;
+  }
+
+  .img-principal {
+    height: 30rem;
+  }
+
+  .img-secundaria {
+    display: none;
+  }
+
+  #av3 {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    margin-top: 1rem;
+  }
+
+  .avaliacao {
+    grid-area: avaliacao;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  #av3 {
+    color: white;
+  }
+
+  #para {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+
+  #av3 img {
+    height: 3rem;
+    width: 3;
+    padding-right: 0.4rem;
+    padding-bottom: 0.25rem;
+  }
+
+  #av3 h2 {
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  .footer-container-jogo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem 1fr 5rem 5rem 4.5rem;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "genero avaliacao"
+      "resumo resumo"
+      "developer developer"
+      "curiosidade curiosidade"
+      "avaliar button2"
+      ;
+  }
+
+  .button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button p {
+    display: none;
+  }
+
+  .button button {
+    margin-top: 0;
+    font-size: 1.6rem;
+  }
+
+  .button2 {
+    display: flex;
+    padding: 0;
+    margin: 0%;
+    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .curiosidade {
+    border-bottom: 0.1rem solid gray;
+  }
+
+  .button2 a {
+    font-size: 1.6rem;
+    border-radius: 2rem;
+  }
+
+  #video-play {
+    width: 100%;
+    height: 100%;
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-right: 0.8rem;
+    position: relative;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+
+  #explorer-lateral {
+    display: none;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  /* Cards mobile */
+
+  .card-explore {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .title-explore h2 {
+    font-size: 2.3rem;
+  }
+
+  .cards-mobile {
+    display: flex;
+    margin-right: 10%;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 16rem;
+    box-shadow: 0 0 0.4rem 0.05rem #00ff88;
+    margin-bottom: 1.5rem;
+  }
+
+  .imagem-mobile {
+    width: 30%;
+  }
+
+  .cards-mobile img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .conteudo-mobile {
+    width: 70%;
+    background: linear-gradient(550deg, #0f0f0f, #00ff8846);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+  }
+
+  .title-mobile {
+    font-size: 2.4rem;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    padding-left: 2rem;
+    width: 95%;
+  }
+
+  .avaliacao-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .avaliacao-mobile img {
+    width: 4rem;
+    padding-left: 2rem;
+  }
+
+  .avaliacao-mobile p {
+    font-size: 2rem;
+    color: white;
+    margin-left: 1rem;
+  }
+
+  .conteudo-mobile button {
+    height: 3.3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    background: none;
+    border: 0.1rem solid #00ff88;
+    width: 18rem;
+    margin-left: 2rem;
+    justify-content: center;
+    border-radius: 1rem;
+  }
+
+  .add-mobile img {
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0;
+  }
+
+  .comentarios-dentro {
+    width: 82%;
+  }
+
+  .explore-more {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) { 
+ .button button,
+  .button p,
+  #av3 h2,
+  .button2 a {
+    font-size: 1.2rem;
+  }
+
+  #av3 p {
+    font-size: 1.2rem;
+  }
+
+  #av3 img {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  #if2 h3 {
+    max-width: 95%;
+    padding-bottom: 1rem;
+  }
+
+  .img-principal {
+    height: 26rem;
+  }
+
+  .comentarios-dentro {
+    width: 80%;
+  }
+
+}

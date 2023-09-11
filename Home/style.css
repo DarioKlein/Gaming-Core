@@ -1,0 +1,2007 @@
+/* Banner */
+.banner {
+    padding-top: 4.5rem;
+    width: 100%;
+    height: 30rem;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.espacamento-banner {
+    width: 100%;
+    height: 7rem;
+}
+
+/* Primeiro Titulo */
+.titulo1-destaque {
+    width: 100%;
+    height: 10rem;
+    background-color: #00ff88;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+}
+
+.titulo1-destaque h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+}
+
+
+
+/* CARROSSEL DESTAQUES  */
+
+.espacamento-carrosel {
+    height: 3rem;
+}
+
+.preenchimento {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo {
+    overflow-y: hidden;
+    display: flex;
+    width: 90%;
+    height: 41.6rem;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid #00ff88;
+    border-radius: 1rem;
+    background: linear-gradient(45deg, #1c1c1c, #182c22, #1c1c1c, #182c22, #1c1c1c);
+    background-size: 400% 100%;
+    transition: 0.7s;
+    box-shadow: 0 0 14px 0px #000000;
+
+}
+
+.conteudo2 {
+    overflow-y: hidden;
+    display: flex;
+    width: 90%;
+    height: 41.6rem;
+    justify-content: center;
+    transition: 0.7s;
+    align-items: center;
+    transform: translateY(-100%) translateX(110%);
+    border: 0.2rem solid #00ff88;
+    border-radius: 1rem;
+    background: linear-gradient(45deg, #1c1c1c, #182c22, #1c1c1c, #182c22, #1c1c1c);
+    background-size: 400% 100%;
+    position: absolute;
+    box-shadow: 0 0 7px 0px #000;
+
+
+}
+
+.ver-mais {
+    display: none;
+}
+
+
+
+.carrossel-img {
+    width: 45%;
+    height: 98%;
+    display: flex;
+
+}
+
+.carrossel-txt {
+    width: 45%;
+    height: 98%;
+    display: block;
+    justify-content: center;
+    text-align: left;
+    background-color: transparent;
+    border-right: 0.2rem solid #00ff88;
+
+}
+
+
+#imagem {
+    width: 100%;
+    height: 100%;
+    border-left: 0.2rem solid #00ff88;
+    border-right: 0.2rem solid #00ff88;
+    border-radius: 1rem;
+}
+
+#imagem1 {
+    width: 100%;
+    height: 100%;
+}
+
+
+.titulo {
+    width: 100%;
+    background-size: 400% 100%;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, white, #00ff88, white, #00ff88, white);
+    background-size: 400% 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    border-bottom: 0.2rem solid #00ff88;
+    margin-bottom: 2.7rem;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+
+.titulo h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.textos2 {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.textos2 p {
+    font-size: 2rem;
+    color: white;
+    padding-left: 3%;
+}
+
+.textos2 span {
+    color: #00ff88;
+}
+
+
+.textos3 {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.textos3 p {
+    color: #999999;
+    font-size: 1.45rem;
+    padding-left: 3%;
+    text-align: justify;
+    padding-right: 3%;
+}
+
+
+.plataformas {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 3rem;
+}
+
+
+.plataformas p {
+    font-size: 1.9rem;
+    color: white;
+    padding-left: 3%;
+}
+
+.plataformas span {
+    color: #00ff88;
+}
+
+.vejma {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vejma a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    border: 0.1rem solid;
+    border-radius: 0.6rem;
+}
+
+.add-img{
+    width: 2.5rem;
+    height: 100%;
+    margin-right: 0.5rem;
+}
+
+.arrow-img{
+    width: 2.5rem;
+    height: 50%;
+}
+
+.add {
+    border: 0.1rem solid #00ff88;
+    background: none;
+    font-size: 2rem;
+    color: #00ff88;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.vejamais {
+    border: 0.1rem solid rgba(255, 255, 255, 0.404);
+    background: none;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botao-passar {
+    width: 6rem;
+    height: 7rem;
+    background: none;
+    border: none;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    cursor: pointer;
+}
+
+.cards-mobile {
+    display: none;
+}
+
+/* CARROSSEL LANÇAMENTOS */
+
+.titulo-lancamentos {
+    width: 50%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.titulo-lancamentos h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.titulo-lancamentos span {
+    color: #00ff88;
+}
+
+.container-card {
+    width: 100%;
+    height: 39rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.carrossel-mobile {
+    display: none;
+}
+
+.titulo-card {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    padding-left: 4%;
+    background-color: transparent;
+}
+
+
+.card1 {
+    width: 17%;
+    background-color: transparent;
+    height: 97%;
+    border-radius: 1rem;
+    position: relative;
+    background: linear-gradient(1000deg, #00ff8023, #00ff80, #00ff801a, #1fff8f, #00ff8025, rgb(31, 255, 143), #00ff8018);
+    background-size: 4000% 600%;
+    box-shadow: 0 0 0.7rem 0rem #000;
+
+}
+
+.card1 img {
+    width: 100%;
+    height: 60%;
+    overflow-y: hidden;
+}
+
+.card1 button {
+    background: none;
+    border: none;
+    color: #00ff7f;
+    font-size: 2.1rem;
+}
+
+.raio{
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card1 h2 {
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: white;
+    text-align: end;
+}
+
+.container-card2 {
+    width: 100%;
+    height: 39rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-around;
+    transform: translateX(100%) translateY(-100%);
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.card1 p {
+    font-size: 1.4rem;
+    color: #e8eaed;
+    background-color: transparent;
+}
+
+.data-card {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 10%;
+    padding-left: 4%;
+}
+
+.button-card {
+    width: 100%;
+    background-color: transparent;
+    padding-left: 4%;
+}
+.button-card img{
+    width: 1.7rem;
+    height: 2.5rem;
+}
+
+.button-card a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-card button {
+    width: 95%;
+    border: 0.2rem solid white;
+    background-color: white;
+    border-radius: 0.6rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+
+}
+
+.botao-passar2 {
+    background: none;
+    border: none;
+    width: 5%;
+    height: 7rem;
+    cursor: pointer;
+}
+
+#pedro {
+    opacity: 30%;
+}
+
+.fav {
+    display: none;
+
+}
+
+.fav img {
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 75%;
+}
+
+.fav img:hover {
+    filter: brightness(200%);
+}
+
+.card1:hover {
+    opacity: 85%;
+}
+
+.card1:hover>.fav {
+    display: block;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 0%;
+}
+
+.arrastar-lado {
+    display: none;
+}
+
+/* CARROSSEL FAVORITOS */
+
+.carrossel-galeria {
+    width: 90%;
+    height: 47rem;
+    display: flex;
+    background: linear-gradient(1000deg, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c);
+    align-items: center;
+    margin-left: 5%;
+    border: 0.2rem solid #00ff88;
+    border-radius: 2rem;
+    transition: 0.8s;
+}
+
+.carrossel-galeria2 {
+    width: 90%;
+    height: 47rem;
+    display: none;
+    background: linear-gradient(250deg, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c);
+    align-items: center;
+    margin-left: 5%;
+    border: 0.2rem solid #00ff88;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: 0.8s;
+
+}
+
+
+.divisao {
+    width: 50%;
+    background-color: transparent;
+    height: 47rem;
+    border-right: 0.2rem solid #00ff88;
+    display: flex;
+    align-items: center;
+
+}
+
+.divisao2 {
+    width: 50%;
+    background-color: transparent;
+    height: 45rem;
+}
+
+.img-principal {
+    width: 100%;
+    height: 47rem;
+    background-color: transparent;
+
+}
+
+.img-principal img {
+    width: 100%;
+    height: 99%;
+    margin-top: 0.3%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.titulo-galeria {
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.2rem solid #00ff88;
+    align-items: center;
+    margin-top: -1%;
+}
+
+.titulo-galeria h2 {
+    font-size: 2.6rem;
+    color: white;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.imagens-secundaria {
+    width: 95%;
+    margin: 2.5%;
+    height: 33rem;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagens-secundaria a {
+    background: none;
+}
+
+
+.img-secundaria {
+    width: 47.5%;
+    height: 45%;
+    background-color: transparent;
+    border: 0.1rem solid #000000;
+
+}
+
+.img-secundaria2 {
+    width: 47.5%;
+    height: 45%;
+    background-color: transparent;
+    margin-left: 5%;
+    border: 0.1rem solid #000000;
+
+}
+
+.img-secundaria3 {
+    width: 47.5%;
+    height: 45%;
+    background-color: transparent;
+    margin-top: 5%;
+    border: 0.1rem solid #000000;
+
+}
+
+.img-secundaria4 {
+    width: 47.5%;
+    height: 45%;
+    background-color: transparent;
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 0.1rem solid #000000;
+
+}
+
+
+
+
+.botao-galeria {
+    width: 100%;
+    height: 3.8rem;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    background-color: transparent;
+}
+
+.botao-galeria button {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 100%;
+    border: 0.2rem solid white;
+    background: none;
+    border-radius: 0.8rem;
+    color: white;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.bolas {
+    justify-content: center;
+    display: flex;
+    padding-top: 1.5rem;
+}
+
+.botao-btn {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+
+#botao1 {
+    background-color: #00ff88;
+    z-index: 8888;
+}
+
+#botao2 {
+    z-index: 8888;
+}
+
+
+#botao3 {
+    z-index: 8888;
+}
+
+
+
+
+#img01 {
+    display: none;
+}
+
+#img02 {
+    display: none;
+}
+
+#img03 {
+    display: none;
+}
+
+#img04 {
+    display: none;
+}
+
+
+#img05 {
+    display: none;
+}
+
+#img06 {
+    display: none;
+}
+
+#img07 {
+    display: none;
+}
+
+#img08 {
+    display: none;
+}
+
+#img09 {
+    display: none;
+}
+
+#img010 {
+    display: none;
+}
+
+#img011 {
+    display: none;
+}
+
+#img012 {
+    display: none;
+}
+
+/* recomendações */
+
+.recomendacao {
+    width: 100%;
+    height: 19rem;
+    display: flex;
+}
+
+.titulo-meio {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.titulo-meio h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.titulo-meio span {
+    color: #00ff88;
+}
+
+.textos-meio {
+    width: 75%;
+}
+
+.text-meio {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+
+.text-meio p {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-left: 5%;
+}
+
+.button-meio {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.button-meio a {
+    text-decoration: none;
+    color: #00ff80;
+    font-family: 'Poppins', sans-serif;
+    border: 0.1rem solid #00ff80;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.controle-meio {
+    width: 20%;
+    height: 100%;
+}
+
+.linha hr {
+    color: #00ff80;
+}
+
+
+/*  CARROSSEL TOP */
+
+.titulo-top {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.titulo-top h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.titulo-top span {
+    color: #00ff88;
+}
+
+.titulo-top a {
+    text-decoration: none;
+    color: #00ff88;
+    font-size: 1.3rem;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-top a img{
+    width: 7%;
+    height: 3.5rem;
+}
+
+/* CARROSSEL 4 TOP */
+.container-card_v2 {
+    width: 100%;
+    height: 42rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.titulo-card_v2 {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-bottom: 3%;
+    padding-left: 4%;
+    background-color: transparent;
+}
+
+
+.card1_v2 {
+    width: 17%;
+    background-color: transparent;
+    height: 41rem;
+    border-radius: 1rem;
+    position: relative;
+    background-color: black;
+    background-size: 400% 100%;
+    box-shadow: 0 0 0.7rem 0rem #00ff6a;
+
+}
+
+.star{
+    width: 2rem;
+    height: 3.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.card1_v2 img {
+    width: 100%;
+    height: 60%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    overflow-y: hidden;
+}
+
+.card1_v2 button {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+}
+
+.card1_v2 h2 {
+    font-size: 1.8rem;
+    padding-left: 4%;
+    background-color: transparent;
+    color: #00ff88;
+    text-align: end;
+    padding-top: 0.5rem;
+}
+
+.container-card2_v2 {
+    width: 100%;
+    height: 42rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-around;
+    transform: translateX(100%) translateY(-100%);
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.data-card_v2 {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 5%;
+    padding-left: 7.5%;
+}
+
+.data-card_v2 p {
+    font-size: 2.3rem;
+    color: #e8eaed;
+    background-color: transparent;
+}
+
+.button-card_v2 {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 0.3rem;
+}
+
+.arrow-trailer{
+    width: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0.3rem;
+}
+
+.button-card_v2 a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+
+.button-card_v2 button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-card2_v2 {
+    width: 100%;
+    background-color: transparent;
+    padding-left: 4%;
+}
+
+.button-card2_v2 span {
+    background-color: transparent;
+}
+
+.button-card2_v2 a {
+    text-decoration: none;
+    color: #00ff88;
+    background-color: transparent;
+}
+
+.button-card2_v2 button {
+    width: 95%;
+    border: 0.2rem solid #00ff88;
+    background-color: transparent;
+    border-radius: 0.6rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.botao-passar2_v2 {
+    width: 5%;
+    height: 7rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button.botao-passar2_v2{
+    cursor: pointer;
+}
+
+.passar2_v2 {
+    font-size: 3rem;
+    color: #00ff88;
+}
+
+#pedro_v2 {
+    opacity: 30%;
+}
+
+.fav_v2 {
+    display: none;
+
+}
+
+.fav_v2 img {
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 75%;
+}
+
+.fav_v2 img:hover {
+    filter: brightness(200%);
+}
+
+.card1_v2:hover {
+    opacity: 85%;
+}
+
+.card1_v2:hover>.fav_v2 {
+    display: block;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 0%;
+}
+
+.mobile-cards {
+    display: none;
+}
+
+/* monte sua lista */
+
+.favorito-monte{
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+}
+
+.favorito-monte img{
+    width: 15%;
+    height: 100%;
+    padding-bottom: 2%;
+}
+
+.text-monte{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+}
+.text-monte h2{
+    color: white;
+    font-size: 3rem;
+}
+.text-monte2{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.text-monte2 p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.button-monte {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-monte a {
+    text-decoration: none;
+    color: #00ff80;
+    font-family: 'Poppins', sans-serif;
+    border: 0.1rem solid #00ff80;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 1250px){
+    /* CARROSSEL 4 TOP RESPONSIVE */
+    .button-card2_v2 span{
+        display: none;
+    }
+
+    .passar2_v2{
+        font-size: 3rem; 
+    }
+
+    .data-card_v2 p{
+        font-size: 1.8rem;
+    }    
+    
+}
+
+@media (max-width: 1200px) {
+    /* RESPONSIVIDADE CARROSEL 1 */
+
+    .titulo h2 {
+        font-size: 3rem;
+
+    }
+
+    .textos2 p {
+        font-size: 1.7rem;
+    }
+
+    .textos3 p {
+        font-size: 1.5rem;
+    }
+
+    .plataformas p {
+        font-size: 1.7rem
+    }
+
+    .add span {
+        display: none;
+    }
+
+    /* CARROSEL 2 LANÇAMENTOS */
+
+    .button-card a {
+        font-size: 1.5rem;
+    }
+
+    .button-card {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .button-card button {
+        width: 85%;
+        border: 0.2rem solid white;
+        background-color: white;
+        border-radius: 0.6rem;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+
+    }
+
+    .titulo-card h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    /* RESPONSIVIDADE CARROSEL 1 */
+
+    .titulo h2 {
+        font-size: 2rem;
+
+    }
+
+    .textos2 p {
+        font-size: 1.5rem;
+    }
+
+    .textos3 p {
+        font-size: 1.3rem;
+    }
+
+    .plataformas p {
+        font-size: 1.35rem
+    }
+
+    .add span {
+        display: none;
+    }
+
+    /* CARROSEL 2 LANÇAMENTOS */
+
+    .container-card {
+        height: 35rem;
+    }
+
+    .titulo-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .titulo-card button {
+        font-size: 1.3rem;
+    }
+
+
+    .card1 {
+        height: 30rem;
+
+    }
+
+    .container-card2 {
+        height: 35rem;
+    }
+
+    .data-card p {
+        font-size: 1rem;
+    }
+
+    .button-card a {
+        font-size: 1rem;
+        background-color: white;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 22%;
+        padding-left: 22%;
+        border-radius: 0.7rem;
+    }
+
+    .button-card button {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+
+    /* CARROSSEL 3 FAVORITOS */
+    .titulo-galeria h2 {
+        font-size: 2.1rem;
+    }
+
+    .titulo-top a {
+        padding-left: 33%;
+    }
+
+    /* CARROSSEL 4 TOP */
+
+    .container-card_v2{
+        height: 38rem;
+
+    } 
+    .container-card2_v2{
+        height: 38rem;
+    }
+
+    .card1_v2{
+        height: 36rem;
+    }
+
+    .passar2_v2{
+        font-size: 3rem; 
+    }
+
+    .card1_v2{
+        width: 20%;
+    }
+
+    .titulo-card_v2 h2{
+        font-size: 1.5rem;
+    }
+
+    .data-card_v2 p{
+        font-size: 1.5rem;
+    }
+    .button-card2_v2 span{
+        display: none;
+    }    
+
+    /* monte sua lista */
+    
+    .favorito-monte img{
+        width: 15%;
+        height: 75%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+   /* RESPONSIVIDADE CARROSSEL 1 */
+
+    .conteudo {
+        display: none;
+    }
+
+    .conteudo2 {
+        display: none;
+    }
+
+    a {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .cards-mobile {
+        display: flex;
+        width: 94%;
+        margin: 3%;
+        height: 15rem;
+        background: linear-gradient(1000deg, #00ff8023, #00ff80, #00ff801a, #1fff8f, #00ff8025, rgb(31, 255, 143), #00ff8018);
+        background-size: 4000% 600%;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0 7px 0px #000000;
+
+    }
+
+    .add-img-mobile{
+    width: 1.5rem;
+    height: 100%;
+    margin-right: 0.5rem;
+    }
+
+
+    .mobile-text {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .img-mobile2 {
+        width: 20%;
+        height: 12.5rem;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+
+    .img-mobile2 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+    }
+
+    .mobile-titulo {
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        justify-content: space-between;
+        background-color: transparent;
+        align-items: center;
+    }
+
+    .mobile-titulo h2 {
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2rem;
+    }
+
+    .mobile-textos {
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .mobile-textos p {
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-size: 1.4rem;
+        margin-bottom: 1.5%;
+    }
+
+    .mobile-textos span {
+        color: #00ff88;
+        background-color: transparent;
+
+    }
+
+    .mobile-plataformas {
+        background-color: transparent;
+        width: 100%;
+        margin-bottom: 1.5%;
+    }
+
+    .mobile-plataformas p {
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-size: 1.4rem;
+    }
+
+    .mobile-plataformas span {
+        color: #00ff88;
+    }
+
+    .mobile-btn {
+        display: flex;
+        justify-content: right;
+        background: none;
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .mobile-vejamais {
+        display: block;
+        border: none;
+        background: transparent;
+        height: 5rem;
+        align-content: right;
+
+    }
+
+    .mobile-vejamais img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-butn {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .mobile-butn button {
+        width: 35%;
+        border: 0.2rem solid #00ff88;
+        background-color: transparent;
+        border-radius: 0.6rem;
+        margin-left: 2%;
+        color: #00ff88;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .ver-mais {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .ver-mais a {
+        width: 30%;
+        background: none;
+        border: 0.1rem solid white;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*RESPONSIVIDADE CARROSSEL 2 */
+
+    .container-card {
+        display: none;
+    }
+
+    .container-card2 {
+        display: none;
+    }
+
+    .carrossel-mobile {
+        width: 100%;
+        height: 38rem;
+        background-color: transparent;
+        display: flex;
+        justify-content: left;
+    }
+
+    .fav {
+        display: block;
+        align-items: right;
+        position: absolute;
+        background: none;
+        border: none;
+        width: 23%;
+        height: 20%;
+        margin-left: 75%;
+    }
+
+
+    .carousel2 {
+        width: 100%;
+        height: 38rem;
+        /* ajuste o tamanho conforme necessário */
+        background-color: transparent;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+
+    .conteudo1 {
+        width: 100%;
+        height: 38rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        font-family: 'Poppins', sans-serif;
+        background-color: transparent;
+        padding-left: 0.5%;
+    }
+
+    .imagem1-mobile {
+        width: 92%;
+        height: 22rem;
+        box-shadow: 0 0 7px 0px #000;
+        position: relative;
+
+    }
+
+    .carousel2 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-carrossel-mobile {
+        width: 92%;
+        height: 14rem;
+        background: linear-gradient(1000deg, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c, #1fff8f33, #1c1c1c);
+        background-size: 400% 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        box-shadow: 0 0 0.7rem 0rem #000000;
+
+    }
+
+    .titulo-mobile2 {
+        width: 100%;
+        height: 4rem;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        padding-left: 0.4rem;
+    }
+
+    .titulo-mobile2 h2 {
+        color: white;
+        font-size: 1.6rem;
+        background-color: transparent;
+    }
+
+    .titulo-mobile2 span {
+        font-size: 1.4rem;
+        color: #00ff7f;
+        background-color: transparent;
+    }
+
+    .text2-mobile {
+
+        width: 100%;
+        height: 5rem;
+        background-color: transparent;
+    }
+
+    .text2-mobile p {
+        padding: 1rem;
+        color: #e8eaed;
+        font-size: 1.6rem;
+        background-color: transparent;
+    }
+
+    .button-card-mobile2 {
+        width: 100%;
+        background-color: transparent;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-card-mobile2 a {
+        text-decoration: none;
+        color: black;
+        background-color: transparent;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .button-card-mobile2 p {
+        font-size: 1.8rem;
+        border: 0.1rem solid white;
+        background-color: white;
+        border-radius: 0.6rem;
+        padding: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-card-mobile2 p img{
+        width: 10%;
+        height: 3rem;
+    }
+
+    .button-card-mobile2 button {
+        width: 90%;
+        border: none;
+        background: none;
+    }
+
+    .arrastar-lado {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrastar-lado p {
+        color: white;
+        font-size: 1.8rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrastar-lado p img{
+        width: 10%;
+        height: 10rem;
+        margin-left: 0.2rem;
+    }
+
+    /* RESPONSIVIDADE CARROSSEL 3  */
+    .carrossel-galeria {
+        height: 28rem;
+    }
+
+    .carrossel-galeria2 {
+        height: 28rem;
+    }
+
+    .img-principal {
+        height: 28rem;
+    }
+
+    .divisao {
+        height: 28rem;
+    }
+
+    .divisao2 {
+        height: 26rem;
+    }
+
+    .titulo-galeria h2 {
+        font-size: 1.4rem;
+    }
+
+    .imagens-secundaria {
+        height: 16rem;
+    }
+
+    /* recomendações */
+
+    .recomendacao {
+        width: 100%;
+        height: 19rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .titulo-meio {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .titulo-meio h2 {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .titulo-meio span {
+        color: #00ff88;
+    }
+
+    .textos-meio {
+        width: 75%;
+    }
+
+    .text-meio {
+        width: 100%;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .text-meio p {
+        font-size: 1.6rem;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        padding-left: 5%;
+    }
+
+    .button-meio {
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .button-meio a {
+        text-decoration: none;
+        color: #00ff80;
+        font-family: 'Poppins', sans-serif;
+        border: 0.1rem solid #00ff80;
+        border-radius: 0.5rem;
+        padding: 0.8rem;
+        font-size: 1.6rem;
+    }
+
+    .controle-meio {
+        width: 20%;
+        height: 60%;
+    }
+
+    .linha hr {
+        color: #00ff80;
+    }
+
+    .titulo-top h2 {
+        font-size: 2.2rem;
+    }
+
+    .titulo-top a {
+        font-size: 1rem;
+        padding-left: 12%;
+    }
+
+    /* CARROSSEL 4 TOP */
+
+    a{
+        list-style: none;
+        text-decoration: none;
+        
+    }
+    .container-card_v2{
+        display: none;
+    }
+    .container-card2_v2{
+        display: none;
+    }
+
+    .mobile-cards{
+        display: flex;
+        width: 94%;
+        margin: 3%;
+        height: 12.5rem;
+        background-color: black;
+        background-size: 4000% 600%;
+        border-radius: 1rem;
+        box-shadow: 0 0  0.45rem 0rem #00ff6a;
+
+    }
+    .img-mobile{
+        width: 20%;
+        height: 10.5rem;
+        margin: 1rem;
+        border-radius: 0.4rem;
+    }
+    .img-mobile img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+    }
+    .texto-lateral-mobile{
+        display: inline-block;
+        width: 80%;
+        height: 100%;
+        background-color: transparent;
+        position: relative;
+    }
+    .favorito-mobile{
+        display: flex;
+        justify-content: right;
+        background: none;
+        position: absolute;
+        width: 100%;
+
+    }
+    .title-mobile{
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        justify-content: space-between;
+        background-color: transparent;
+        align-items: center;
+
+    }
+    .fav_v2{
+        display: block;
+        border: none;
+        background: transparent;
+        width: 15%;
+        height: 5rem;
+        align-content: right;
+    }
+    .title-mobile h2{
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2rem;
+    }
+    .avaliacao-mobile{
+        background-color: transparent;
+        width: 100%;
+    }
+    .avaliacao-mobile p{
+       background-color: transparent;
+       padding-left: 2%;
+       color: white;
+       font-size: 1.7rem;
+    }
+    .avaliacao-mobile span{
+        color: #00ff88;
+        background-color: transparent;
+    
+     }
+    .espaco-mobile{
+        width: 100%;
+        height: 6%;
+        background-color: transparent;
+    }
+    .botao-mobile2{
+        padding-top: 2%;
+        width: 100%;
+        background-color: transparent;
+    }
+    .botao-mobile2 button{
+        width: 35%;
+        border: 0.2rem solid #00ff88;
+        background-color: transparent;
+        border-radius: 0.6rem;
+        margin-left: 2%;
+        color: #00ff88;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    /* monte sua lista */
+
+    .favorito-monte{
+        height: 10rem;
+    }
+    
+    .favorito-monte img{
+        height: 100%;
+    }
+    
+    .text-monte{
+        height: 6rem;
+
+    }
+    .text-monte h2{
+        font-size: 2.4rem;
+    }
+    .text-monte2{
+        height: 3rem;
+    }
+    
+    .text-monte2 p{
+        font-size: 1rem;
+    }
+
+ }
+
+ @media (max-width: 480px) { 
+   .banner {
+        height: 21rem;
+    }
+
+    /* RESPONSIVIDADE CARROSEL 1 */
+
+    .cards-mobile {
+        height: 13rem;
+    }
+
+    .img-mobile2 {
+        height: 11rem;
+    }
+
+    .mobile-titulo h2 {
+        font-size: 1.6rem;
+    }
+
+    .mobile-textos p {
+        font-size: 1.2rem;
+    }
+
+    .mobile-plataformas p {
+        font-size: 1.2rem;
+    }
+
+    .mobile-butn button {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+
+    .mobile-vejamais img {
+        margin-top: -0.5rem;
+        width: 78%;
+        height: 73%;
+    }
+
+    /* RESPONSIVIDADE CARROSSEL 2 */
+    .imagem1-mobile {
+        width: 80%;
+        height: 24rem;
+    }
+
+    .text-carrossel-mobile {
+        width: 80%;
+        height: 14rem;
+    }
+
+    .conteudo1 {
+        padding-left: 1.2%;
+    }
+
+    .fav {
+        width: 20%;
+    }
+
+    .carrossel-mobile {
+        height: 40rem;
+    }
+
+    .carousel2 {
+        height: 40rem;
+        width: 85%;
+        margin-left: 3rem;
+    }
+
+    .conteudo1 {
+        height: 40rem;
+    }
+
+    /* RESPONSIVIDADE CARROSSEL 3 */
+    .carrossel-galeria {
+        height: 23rem;
+    }
+
+    .carrossel-galeria2 {
+        height: 23rem;
+    }
+
+    .img-principal {
+        height: 22.5rem;
+    }
+
+    .divisao {
+        height: 23rem;
+    }
+
+    .divisao2 {
+        height: 22rem;
+    }
+
+    .titulo-galeria {
+        height: 12%;
+    }
+
+    .titulo-galeria h2 {
+        font-size: 0.9rem;
+    }
+
+    .imagens-secundaria {
+        height: 14rem;
+    }
+
+    /* Recomendação */
+    .controle-meio {
+        display: none;
+    }
+
+    .titulo-top a {
+        display: none;
+
+    }
+
+    /* RESPONSIVIDADE CARROSSEL 4 TOP */
+    .title-mobile h2{
+        font-size: 1.4rem;
+    }
+    .avaliacao-mobile p{
+        font-size: 1.4rem;
+     }
+
+     .botao-mobile2 button{
+        width: 50%;
+    }
+
+    .fav_v2{
+        height: 3rem;
+    }
+
+     /* monte sua lista */
+
+     .favorito-monte{
+        height: 7rem;
+    }
+    
+    .favorito-monte img{
+        height: 100%;
+    }
+    
+    .text-monte{
+        height: 3rem;
+    }
+    .text-monte h2{
+        font-size: 1.6rem;
+    }
+    .text-monte2{
+        height: 3rem;
+    }
+    
+    .text-monte2 p{
+        font-size: 0.9rem;
+    }
+
+ }

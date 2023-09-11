@@ -1,0 +1,746 @@
+.espaco {
+    width: 100%;
+    height: 5rem;
+}
+
+.title-principal {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+
+h1 {
+    color: white;
+    padding-left: 5rem;
+    font-size: 3.2rem;
+}
+
+.title-principal span {
+    color: #00ff80;
+}
+
+/* Filtro Button */
+.filtragem-jogos{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.metade{
+    width: 47.5%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    width: 15rem;
+}
+
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background-color: black;
+    color: #00ff80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.2rem #00ff80 solid;
+    border-radius: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: backgorund 0.3s;
+
+}
+
+.select-clicked {
+    border: 0.2rem solid white;
+    box-shadow: 0 0 0.5rem white;
+}
+
+.select:hover {
+    background-color: #1a1a1a;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.6rem solid white;
+    transition: 0.3s;
+
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    list-style: none;
+    padding: 0.2rem 0.5rem;
+    background: black;
+    border: 0.1rem solid #00ff80;
+    box-shadow: 0 0.5rem 1rem #1a1a1a;
+    border-radius: 0.5rem;
+    color: white;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 1rem 0.8rem;
+    margin: 0.5rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:hover {
+    background: #1a1a1a;
+}
+
+.active {
+    background: black;
+}
+
+.menu-open {
+    display: block;
+    opacity: 100%;
+}
+
+#linha {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #00ff88;
+    height: 0.2rem;
+    border: none;
+}
+
+/* Botão de pesquisa */
+
+.botao-pesquisa{
+    width: 47.5%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+}
+
+#btn-pesquisa{
+    background-color: black;
+    width: 35rem;
+    border: 0.2rem solid #00ff80;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    height: 3.2rem;
+    color: white;
+    padding-left: 3.7rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+#image-search{
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-pesquisa{
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    margin-top: -2.6rem;
+    background: none;
+}
+
+#btn-pesquisa:focus{
+    border: 0.2rem solid white;
+}
+#pesquisar{
+    height: 3.2rem;
+    border: 0.2rem solid #00ff80;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1.3rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+#pesquisar:hover{
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+}
+
+/*  Jogos */
+
+.container-card {
+    margin-top: 2rem;
+    width: 100%;
+    height: 39rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: flex-start;
+    margin-left: 1.7%;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.titulo-card {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 1%;
+    padding-left: 4%;
+    background-color: transparent;
+}
+
+.raio{
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card1 {
+    width: 17%;
+    background-color: transparent;
+    height: 97%;
+    border-radius: 1rem;
+    position: relative;
+    background: linear-gradient(1000deg, #00ff8023, #00ff80, #00ff801a, #1fff8f, #00ff8025, rgb(31, 255, 143), #00ff8018);
+    background-size: 4000% 600%;
+    box-shadow: 0 0 0.7rem 0rem #000;
+    margin-left: 6%;
+}
+
+.card1 img {
+    width: 100%;
+    height: 60%;
+    overflow-y: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card1 button {
+    background: none;
+    border: none;
+    color: #00ff7f;
+    font-size: 2.1rem;
+}
+
+.card1 h2 {
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: white;
+    text-align: end;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+}
+
+.card1 p {
+    font-size: 1.4rem;
+    color: #e8eaed;
+    background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+}
+
+.data-card {
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 10%;
+    padding-left: 7%;
+}
+
+.button-card {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.button-card a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+
+.button-card button {
+    width: 95%;
+    border: 0.2rem solid white;
+    background-color: white;
+    border-radius: 0.6rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+
+}
+
+.button-card img{
+    width: 1.7rem;
+    height: 2.5rem;
+}
+
+#pedro {
+    opacity: 30%;
+}
+
+.fav {
+    display: none;
+
+}
+
+.fav img {
+    border: none;
+    background-color: transparent;
+    color: white;
+    width: 75%;
+}
+
+.fav img:hover {
+    filter: brightness(200%);
+}
+
+.card1:hover {
+    opacity: 85%;
+}
+
+.card1:hover>.fav {
+    display: block;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 0%;
+}
+
+/* MOBILE */
+
+.mobile-cards {
+    display: none;
+}
+
+.align {
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.direct-paginas {
+    display: flex;
+    background-color: rgb(22, 21, 21);
+    border: 0.1rem solid rgba(255, 255, 255, 0.13);
+    align-items: center;
+    justify-content: center;
+    width: 60rem;
+}
+
+.direct-paginas a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.2rem;
+    margin-left: 2.5rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.direct-paginas span {
+    font-size: 2.2rem;
+    color: #00ff80;
+}
+
+#linha2 {
+    width: 95%;
+    margin-top: 5rem;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #00ff88;
+    height: 0.2rem;
+    border: none;
+}
+
+#p1:hover {
+    color: #00ff80;
+}
+
+#p2:hover {
+    color: #00ff80;
+}
+
+#p3:hover {
+    color: #00ff80;
+}
+
+#p4:hover {
+    color: #00ff80;
+}
+
+#p5:hover {
+    color: #00ff80;
+}
+
+#p6:hover {
+    color: #00ff80;
+}
+
+#p7:hover {
+    color: #00ff80;
+}
+
+#p8:hover {
+    color: #00ff80;
+}
+
+#p9:hover {
+    color: #00ff80;
+}
+
+#p10 {
+    margin-right: 2.5rem;
+}
+
+#p10:hover {
+    color: #00ff80;
+}
+
+.jogoNaoEncontrado{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogoNaoEncontrado h4{
+    font-size: 3.4rem;
+    color: white;
+}
+
+.jogoNaoEncontrado h5{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.534);
+}
+
+@media (max-width: 1024px) {
+    #btn-pesquisa{
+        width: 25rem;
+    }
+
+    .container-card {
+        height: 35rem;
+    }
+
+    .titulo-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .titulo-card button {
+        font-size: 1.3rem;
+    }
+
+
+    .card1 {
+        height: 30rem;
+
+    }
+
+    .container-card2 {
+        height: 35rem;
+    }
+
+    .data-card p {
+        font-size: 1rem;
+    }
+
+    .button-card a {
+        font-size: 1rem;
+        background-color: white;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 24%;
+        padding-left: 24%;
+        border-radius: 0.7rem;
+    }
+
+    .button-card button {
+        padding: 0;
+        border: none;
+        background: none;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Responsividade dropdown filtro */
+    .botao-pesquisa{
+        width: 67%;
+    }
+
+    .dropdown {
+        width: 13rem;
+    }
+
+    /* responsividade botao-pesquisa */
+
+    #btn-pesquisa{
+        width: 24.5rem;
+    }
+
+    .metade{
+        width: 28%;
+    }
+
+    .container-card {
+        display: none;
+    }
+
+    a {
+        list-style: none;
+        text-decoration: none;
+
+    }
+
+    .mobile-cards {
+        display: flex;
+        width: 94%;
+        margin: 3%;
+        height: 12.5rem;
+        background-color: black;
+        background-size: 4000% 600%;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.45rem 0rem #00ff6a;
+
+    }
+
+    .img-mobile {
+        width: 20%;
+        height: 10.5rem;
+        margin: 1rem;
+        border-radius: 0.4rem;
+    }
+
+    .img-mobile img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+    }
+
+    .texto-lateral-mobile {
+        display: inline-block;
+        width: 80%;
+        height: 100%;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .favorito-mobile {
+        display: flex;
+        justify-content: right;
+        background: none;
+        position: absolute;
+
+    }
+
+    .title-mobile {
+        display: flex;
+        width: 100%;
+        height: 4rem;
+        justify-content: space-between;
+        background-color: transparent;
+        align-items: center;
+
+    }
+
+    .fav {
+        display: block;
+        border: none;
+        background: transparent;
+        width: 15%;
+        height: 3rem;
+        align-content: right;
+    }
+
+    .title-mobile h2 {
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2rem;
+    }
+
+    .avaliacao-mobile {
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .avaliacao-mobile p {
+        background-color: transparent;
+        padding-left: 2%;
+        color: white;
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .avaliacao-mobile p img{
+        width: 5%;
+        height: 2rem;
+        padding-right: 0.5rem;
+    }
+
+    .avaliacao-mobile span {
+        color: #00ff88;
+        background-color: transparent;
+
+    }
+
+    .espaco-mobile {
+        width: 100%;
+        height: 6%;
+        background-color: transparent;
+    }
+
+    .botao-mobile2 {
+        padding-top: 2%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .botao-mobile2 button {
+        width: 35%;
+        border: 0.2rem solid #00ff88;
+        background-color: transparent;
+        border-radius: 0.6rem;
+        margin-left: 2%;
+        color: #00ff88;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .direct-paginas {
+        width: 50rem;
+    }
+
+    .direct-paginas a {
+        font-size: 1.8rem;
+        margin-left: 2.2rem;
+
+    }
+
+    .direct-paginas span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+  .title-mobile h2 {
+        font-size: 1.6rem;
+    }
+
+    .avaliacao-mobile p {
+        font-size: 1.4rem;
+    }
+
+    .botao-mobile2 button {
+        width: 50%;
+    }
+
+    .direct-paginas {
+        width: 40rem;
+    }
+
+    .direct-paginas a {
+        font-size: 1.2rem;
+        margin-left: 1.6rem;
+
+    }
+
+    .direct-paginas span {
+        font-size: 1.2rem;
+    }
+
+     #btn-pesquisa{
+        width: 14rem;
+    }
+
+    #pesquisar{
+        width: 5rem;
+        font-size: 1.2rem;
+        padding-right: 5rem;
+    }
+
+    .menu li {
+        font-size: 1rem;
+    }
+
+    .select {
+        font-size: 0.8rem;
+    }
+
+    .jogoNaoEncontrado h4{
+        font-size: 1.9rem;
+    }
+    
+    .jogoNaoEncontrado h5{
+        font-size: 1.3rem;
+    }
+
+    .avaliacao-mobile p img{
+        width: 7%;
+        height: 2rem;
+        padding-right: 0.5rem;
+    }
+}
