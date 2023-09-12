@@ -1,0 +1,336 @@
+/* Suporte */
+.main-div {
+  width: 100%;
+  height: 44rem;
+  display: flex;
+}
+
+.left-suporte {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 63%;
+  justify-content: center;
+}
+
+.left-suporte p span {
+  color: #00ff88;
+}
+
+.right-suporte {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-suporte img {
+  width: 90%;
+  height: 76%;
+}
+
+.linha {
+  width: 1%;
+
+  height: 30rem;
+  background-color: white;
+}
+
+.left-suporte p {
+  font-size: 2rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.espaco {
+  width: 2%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#p-titulo {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+#p-divmain a {
+  color: #00ff88;
+}
+
+.titulo-perguntas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.titulo-perguntas p {
+  font-size: 3.2rem;
+  color: white;
+}
+
+.titulo-perguntas span {
+  color: #00ff88;
+}
+
+.central-perguntas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "catalogo perfil avaliacao"
+    "comentarios ranking login";
+  grid-gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+#titulo-central {
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+#titulo-central h2 {
+  background: linear-gradient(
+    1000deg,
+    #00ff88,
+    rgb(120, 250, 163),
+    #00ff88,
+    rgb(120, 250, 163)
+  );
+  background-size: 300px 1000px;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border-radius: 1rem;
+}
+
+.cards-central {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 15%;
+}
+
+.cards-central h3 {
+  color: #00ff88;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cards-central p {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  max-width: 94%;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.cards-central img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#t1 {
+  grid-area: catalogo;
+}
+
+#t2 {
+  grid-area: perfil;
+}
+
+#t3 {
+  grid-area: avaliacao;
+}
+
+#t4 {
+  grid-area: comentarios;
+}
+
+#t5 {
+  grid-area: ranking;
+}
+
+#t6 {
+  grid-area: login;
+}
+
+.linha2 {
+  height: 0.1rem;
+  background-color: #00ff88;
+  border: none;
+}
+
+.email-perguntas {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.email-perguntas form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.inputs {
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  height: 3rem;
+  outline: none;
+  padding-left: 2rem;
+  background-color: black;
+  border: 0.2rem solid white;
+  color: white;
+}
+
+.email-perguntas label {
+  color: white;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  padding-left: 3%;
+}
+
+.email-perguntas span {
+  color: #00ff88;
+}
+
+/* Estilos para o botão */
+.btn-enviar {
+  background-color: transparent;
+  color: white;
+  border: 0.1rem solid #00ff88;
+  border-radius: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.btn-enviar:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-vejamais {
+  display: none;
+}
+
+.btn-btn-btn {
+  display: none;
+}
+
+#mobile-depois1 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #p-titulo {
+    font-size: 2.4rem;
+  }
+
+  .left-suporte p {
+    font-size: 1rem;
+  }
+
+  .linha {
+    height: 18.5rem;
+  }
+
+  .right-suporte img {
+    height: 60%;
+  }
+
+  .main-div {
+    height: 30rem;
+  }
+
+  .central-perguntas {
+    grid-template-rows: 30vh 1fr 1fr;
+  }
+
+  .cards-central h3 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95%;
+  }
+
+  .cards-central p {
+    font-size: 0.9rem;
+  }
+
+  .cards-central img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-perguntas form {
+    display: flex;
+    width: 20rem;
+  }
+
+  #p-titulo {
+    font-size: 1.8rem;
+  }
+
+  .titulo-perguntas p {
+    font-size: 2.5rem;
+  }
+
+  .linha {
+    height: 12rem;
+  }
+
+  .central-perguntas {
+    grid-template-rows: 30vh 1fr 1fr;
+  }
+
+  .cards-central h3 {
+    font-size: 1.2rem;
+  }
+
+  #titulo-central h2 {
+    font-size: 1.5rem;
+  }
+
+  .cards-central p {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .cards-central img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cards-central span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

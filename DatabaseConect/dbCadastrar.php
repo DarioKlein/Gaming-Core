@@ -2,7 +2,7 @@
 function criarConexao() {
     $nomeServer = "localhost";
     $userName = "root";
-    $password = "dario";
+    $password = "etec";
     $dbNome = "cadastrar";
 
     $conectaDB = mysqli_connect($nomeServer, $userName, $password, $dbNome);

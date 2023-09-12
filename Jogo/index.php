@@ -43,7 +43,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
     <?php 
         $genero_atual = "";
         $nome_jogo_atual = "";
-        $sql = "SELECT nome, data_lanc, plataformas, genero1, genero2, imagemJogo, imagemVideo, imagemSecundaria1, imagemSecundaria2, resumo, developer, curiosidade FROM games WHERE cod_jogo = $idJogo";
+        $sql = "SELECT nome, data_lanc, plataformas, genero1, genero2, linkVideo, imagemJogo, imagemVideo, imagemSecundaria1, imagemSecundaria2, resumo, developer, curiosidade FROM games WHERE cod_jogo = $idJogo";
 
         $result_div = $conn->query($sql);
 
@@ -91,7 +91,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
         </div>
         <div class="video">
           <img id="video-play" src="'. $row_div["imagemVideo"] .'" alt="" />
-          <a href="https://www.youtube.com/watch?v=53MyR_Z3i1w&t=4s"
+          <a href="'. $row_div["linkVideo"] .'"
             ><img id="play-img" src="extraAndImg-jogo/play.svg" alt=""
           /></a>
         </div>

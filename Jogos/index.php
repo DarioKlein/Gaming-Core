@@ -80,13 +80,8 @@ $username = $_SESSION['username'];
     <div class="container-cards">
         <?php
 //Se conectar com o Banco de dados
-$nomeServer = "localhost"; // Ou o endereço do servidor MySQL externo
-$userName = "root";
-$password = "dario";
-$dbNome = "games";
 
-// Criar conexão
-$conn = mysqli_connect($nomeServer, $userName, $password, $dbNome);
+include '../DatabaseConect/conexao.php'; 
 
 $genreFilter = $_GET['genre'] ?? '';
 $sort = $_GET['sort'] ?? '';
@@ -157,13 +152,8 @@ if ($result->num_rows > 0) {
 <div class="container-div">
         <!-- Conteúdo da div a ser exibida -->
         <?php
-        $nomeServer = "localhost"; // Ou o endereço do servidor MySQL externo
-        $userName = "root";
-        $password = "dario";
-        $dbNome = "games";
         
-        // Criar conexão
-        $conn = mysqli_connect($nomeServer, $userName, $password, $dbNome);
+       include '../DatabaseConect/conexao.php'; 
 
         $genreFilter = $_GET['genre'] ?? '';
         $sort = $_GET['sort'] ?? '';

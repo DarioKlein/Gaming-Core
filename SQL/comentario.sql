@@ -8,7 +8,7 @@ CREATE TABLE comentarios (
     imagemLike VARCHAR(255),
     imagemDeslike VARCHAR(255),
     id_jogo INT
-);
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 
 CREATE TABLE user_actions (

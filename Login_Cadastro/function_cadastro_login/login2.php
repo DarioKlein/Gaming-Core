@@ -84,7 +84,7 @@ $senha = $_SESSION['senha'];
 //Verificar se a variável esta nula no PHP
     $nomeServer = "localhost"; // Ou o endereço do servidor MySQL externo
     $userName = "root";
-    $password = "dario";
+    $password = "etec";
     $dbNome = "cadastrar";
 
     // Criar conexão
