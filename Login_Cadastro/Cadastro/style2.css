@@ -198,32 +198,6 @@ body * {
   z-index: 2;
 }
 
-/* #icon{
-    position: absolute;   
-    margin-left: 60%;
-    margin-top: 8%; 
-    cursor: pointer;
-}
-
-
-#icon2{
-    display: none;
-    position: absolute;   
-    margin-left: 60%;
-    margin-top: 8%; 
-    cursor: pointer;
-}
-
-#icon img{
-    height: 8vh;
-    width: 80%;
-}
-
-
-#icon2 img{
-    height: 8vh;
-    width: 80%;
-} */
 
 @media only screen and (max-width: 950px) {
   .card-login {
