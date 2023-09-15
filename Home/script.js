@@ -487,7 +487,7 @@ function mudaBrilho(id) {
 
 function mudaImg(id) {
   const element = document.getElementById(id)
-  element.src = "extras/favpreenchido.png"
+  element.src = "extras/favpreenchido.svg"
   element.style.opacity = "1"
 }
 
@@ -518,19 +518,16 @@ function mudaFav(id, outroId) {
 }
 
 function voltaFav(id) {
-  // const element = document.getElementById(id);
-  // element.src = "imagens/fav.png";
-  // element.style.opacity = "1";
   const element = document.getElementById(id)
   let opacity = 1
-
+  
   const fadeOutInterval = setInterval(function () {
     if (opacity > 0) {
       opacity -= 0.4 // Ajuste a velocidade de fade conforme necessário
       element.style.opacity = opacity.toString()
     } else {
       clearInterval(fadeOutInterval)
-      element.src = "extras/fav.png"
+      element.src = "extras/fav.svg"
       element.style.opacity = "1"
     }
   }, 100) // Ajuste o i
@@ -546,3 +543,10 @@ botoes.forEach(function (botao) {
 })
 
 const botoes2 = document.querySelectorAll(".fav_v2")
+
+botoes2.forEach(function (botao) {
+  botao.addEventListener("click", function (event) {
+    event.preventDefault()
+    mudaFav(id, outroId)
+  })
+})

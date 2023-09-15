@@ -14,7 +14,7 @@ if (isset($_POST['comentario']) && isset($_POST['idJogo']) && isset($_POST['nome
     $idJogo = ($_POST['idJogo']);
     $comentario = $_POST['comentario'];
     // Inserir o novo comentário no banco de dados
-    $query = "INSERT INTO comentarios (usuario, comentario, imagemLike, imagemDeslike, id_jogo) VALUES ('$usuario', '$comentario', 'extraAndImg-jogo/like.svg', 'extraAndImg-jogo/deslike.svg', '$idJogo')";
+    $query = "INSERT INTO comentarios (usuario, comentario, imagemLike, imagemDeslike, id_jogo) VALUES ('$usuario', '$comentario', 'extraAndImg-jogo/icons/like.svg', 'extraAndImg-jogo/icons/deslike.svg', '$idJogo')";
     $result = mysqli_query($conn, $query);
     if ($result) {
         // Comentário inserido com sucesso, redirecione para a página de comentários

@@ -5,7 +5,7 @@ function favoritar() {
     imagem.classList.add("fadeOut")
 
     setTimeout(function () {
-      imagem.src = "extraAndImg-jogo/add-list.svg"
+      imagem.src = "extraAndImg-jogo/icons/add-list.svg"
       imagem.classList.remove("fadeOut")
       imagem.classList.add("fav1")
       imagem.classList.remove("fav2")
@@ -14,7 +14,7 @@ function favoritar() {
     imagem.classList.add("fadeOut")
 
     setTimeout(function () {
-      imagem.src = "extraAndImg-jogo/list-added.svg"
+      imagem.src = "extraAndImg-jogo/icons/list-added.svg"
       imagem.classList.remove("fadeOut")
       imagem.classList.add("fav2")
       imagem.classList.remove("fav1")
@@ -63,12 +63,12 @@ fecharBotao.addEventListener("click", fecharLightbox)
 function lightIcon(lancamentos, listimg) {
   lancamentos.addEventListener("mouseover", () => {
     setTimeout(() => {
-      listimg.src = "extraAndImg-jogo/list2.svg"
+      listimg.src = "extraAndImg-jogo/icons/list2.svg"
     }, 100)
 
     lancamentos.addEventListener("mouseout", () => {
       setTimeout(() => {
-        listimg.src = "extraAndImg-jogo/list.svg"
+        listimg.src = "extraAndImg-jogo/icons/list.svg"
       }, 100)
     })
   })
@@ -119,7 +119,7 @@ function like(commentId) {
           // Após a confirmação do banco, atualize a contagem de likes no elemento
           const likeCount = parseInt(likeCountElement.textContent) + 1
           likeCountElement.textContent = likeCount
-          likeButton.querySelector("img").src = "extraAndImg-jogo/liked.svg"
+          likeButton.querySelector("img").src = "extraAndImg-jogo/icons/liked.svg"
         } else {
           // Trate o caso em que a confirmação do banco de dados falhou
           console.error("Falha na confirmação do banco de dados.", response)
@@ -160,7 +160,7 @@ function deslike(commentId) {
           // Após a confirmação do banco, atualize a contagem de deslikes no elemento
           const deslikeCount = parseInt(deslikeCountElement.textContent) + 1
           deslikeCountElement.textContent = deslikeCount
-          deslikeButton.querySelector("img").src = "extraAndImg-jogo/Desliked.svg"
+          deslikeButton.querySelector("img").src = "extraAndImg-jogo/icons/Desliked.svg"
         } else {
           // Trate o caso em que a confirmação do banco de dados falhou
           console.error("Falha na confirmação do banco de dados.", response)

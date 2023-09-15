@@ -30,7 +30,7 @@ if (isset($_POST['commentId']) && isset($_POST['action'])) {
         } else {
             // O usuário ainda não realizou a ação no comentário
             // Registre a ação no banco de dados
-            $insertQuery = "INSERT INTO user_actions (username, comment_id, action, imagemLiked, imagemDesliked) VALUES ('$username', $commentId, '$action', 'extraAndImg-jogo/liked.svg', 'extraAndImg-jogo/desliked.svg')";
+            $insertQuery = "INSERT INTO user_actions (username, comment_id, action, imagemLiked, imagemDesliked) VALUES ('$username', $commentId, '$action', 'extraAndImg-jogo/icons/liked.svg', 'extraAndImg-jogo/icons/desliked.svg')";
             
             if (mysqli_query($conn, $insertQuery)) {
                 // Ação registrada com sucesso

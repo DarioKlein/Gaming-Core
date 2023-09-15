@@ -345,11 +345,11 @@ h1 {
     border: none;
     background-color: transparent;
     color: white;
-    width: 75%;
+    width: 85%;
 }
 
 .fav img:hover {
-    filter: brightness(200%);
+    filter: brightness(80%);
 }
 
 .card1:hover {
@@ -360,7 +360,7 @@ h1 {
     display: block;
     position: absolute;
     margin-left: 60%;
-    margin-top: 0%;
+    margin-top: -0.6rem;
 }
 
 /* MOBILE */
@@ -611,6 +611,10 @@ h1 {
         width: 15%;
         height: 3rem;
         align-content: right;
+    }
+
+    .fav img {
+        margin-top: -0.5rem;
     }
 
     .title-mobile h2 {

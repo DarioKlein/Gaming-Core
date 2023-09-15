@@ -513,9 +513,11 @@
 }
 
 .explore-more {
-  max-width: 120rem;
+  width: 70%;
   margin-top: 3rem;
   margin-left: 5%;
+  display: flex; 
+  flex-direction: column;
 }
 
 #explore2 {
@@ -948,10 +950,14 @@ form {
 
 @media (max-width: 1200px) {
   .explore-more {
-    width: 60%;
+    width: 70%;
   }
   #explorer-lateral {
     width: 40%;
+  }
+
+  .cards {
+    width: 13rem;
   }
 }
 
@@ -1030,7 +1036,7 @@ form {
 
   .explore-more {
     grid-template-rows: 7rem 1fr 5rem;
-    width: 64%;
+    width: 70%;
   }
 
   .title-explore2 h2 {
@@ -1054,7 +1060,7 @@ form {
   }
 
   .cards {
-    width: 13rem;
+    width: 10rem;
   }
 
   #line-side {

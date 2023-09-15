@@ -22,7 +22,7 @@ session_destroy();
     <div class="container-erro">
       <p>Você foi deslogado!</p>
       <button class="btn-erro">
-        <a href="../../Login_Cadastro/Login/login.php">Volte para o login</a>
+        <a href="../../../Login_Cadastro/Login/login.php">Volte para o login</a>
       </button>
     </div>
   </body>
