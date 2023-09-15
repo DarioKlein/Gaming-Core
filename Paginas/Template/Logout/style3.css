@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+}
+
+.container-erro {
+  width: 50%;
+  margin-top: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  background-color: transparent;
+}
+
+.container-erro p {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn-erro {
+  width: 85%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: #00ff88;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-erro a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-erro p {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  .btn-erro a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container-erro p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-erro p {
+    font-size: 1rem;
+  }
+
+  .btn-erro {
+    font-weight: 800;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container-erro {
+    width: 70%;
+  }
+}
