@@ -1,10 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username']) && isset($_SESSION['imgPerfil'])) {
     header("Location: ../../Login_Cadastro/Login/login.php");
     exit();
 }
 $username = $_SESSION['username'];
+$avatar = $_SESSION['imgPerfil'];
 ?>
 
 <!DOCTYPE html>

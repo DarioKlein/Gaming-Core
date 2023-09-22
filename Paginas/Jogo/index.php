@@ -1,11 +1,12 @@
 <?php
 include '../DatabaseConect/conexao.php';
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username']) && isset($_SESSION['imgPerfil'])) {
   header("Location: ../../Login_Cadastro/Login/login.php");
   exit();
 }
 $username = $_SESSION['username'];
+$avatar = $_SESSION['imgPerfil'];
 
 if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
   $idJogo = $_GET['idJogo'];
@@ -254,7 +255,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
           </div>
           <div id="corpo-comentarios">
             <div id="comentar">
-              <div class="img-usuario"></div>
+              <div class="img-usuario" style="background-image: url(../avatarAndBanners/<?php echo $avatar; ?>)"></div>
               <input type="text" onclick="abrir()" id="comentario" name="comentario" placeholder="Faça seu comentário..." required />
             </div>
             <div id="ocult-submit">
@@ -292,7 +293,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
         echo '
         <div class="comentarios-adicioandos">
-            <div class="img-usuario"></div>
+            <div class="img-usuario" style="background-image: url(../avatarAndBanners/'. $row_comentarios['imagemPerfil'].')"></div>
             <div class="comentarios-dentro">
                 <span>' . $row_comentarios['usuario'] . ' <h4> ', $data_formatada, '</span>
                 <p>

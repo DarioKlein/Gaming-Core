@@ -860,7 +860,6 @@ form {
   width: 5.5rem;
   height: 5rem;
   border-radius: 50%;
-  background-image: url("avatar/avatar.jpg");
   background-size: cover;
   background-position: center center;
 }

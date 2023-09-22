@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style2.css">
-    <link rel="icon" type="image/x-icon" href="../../Template/Navbar/imgs-navbar/abi.svg" />
+    <link rel="icon" type="image/x-icon" href="../../Paginas/Template/Navbar/imgs-navbar/abi.svg" />
     <title>Gaming Core - Cadastro</title>
 </head>
 

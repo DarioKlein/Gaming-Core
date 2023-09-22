@@ -7,6 +7,7 @@ CREATE TABLE comentarios (
     dislikes INT DEFAULT 0,
     imagemLike VARCHAR(255),
     imagemDeslike VARCHAR(255),
+    imagemPerfil VARCHAR(50),
     id_jogo INT
 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 

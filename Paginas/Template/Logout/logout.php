@@ -14,7 +14,7 @@ session_destroy();
     <link
       rel="icon"
       type="image/x-icon"
-      href="../../../Template/Navbar/imgs-navbar/abi.svg"
+      href="../Navbar/imgs-navbar/abi.svg"
     />
     <title>Gaming Core - Erro</title>
   </head>
