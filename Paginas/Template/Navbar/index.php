@@ -25,7 +25,7 @@
                         echo "<h3>$username</h3>";
                         ?>
                      <ul>
-                         <li><img src="../Template/Navbar/imgs-navbar/profile.svg" alt=""><a href="../Perfil/index.php">Meu perfil</a></li>
+                         <li><img src="../Template/Navbar/imgs-navbar/profile.svg" alt=""><a href="../PerfilUsuario/index.php">Meu perfil</a></li>
                          <li><img src="../Template/Navbar/imgs-navbar/list.svg" alt="../Perfil/lista.php"><a href="">Minha lista</a></li>
                          <li><img src="../Template/Navbar/imgs-navbar/logout.svg" alt=""><a href="../Template/Logout/logout.php">Sair</a></li>
                      </ul>

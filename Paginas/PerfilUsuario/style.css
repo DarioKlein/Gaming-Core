@@ -1,0 +1,812 @@
+main {
+  min-height: 100vh;
+  position: relative;
+}
+
+#espaco-inicial {
+  height: 3rem;
+}
+
+#banner {
+  width: 100%;
+  margin-top: 1.8rem;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#edit-banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+#edit-banner img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+#perfil {
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+#perfil-principal {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #161616;
+  box-shadow: 0 0 0.2rem 0.1rem white;
+  border-radius: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
+  padding-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-top: -8rem;
+  z-index: 1;
+  position: relative;
+}
+
+#perfil-principal > h2 {
+  font-size: 2.5rem;
+}
+
+#perfil-principal > h3 {
+  font-size: 1.8rem;
+  color: #00ff80;
+}
+
+#perfil-spin {
+  position: relative;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#perfil-spin img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 0.2rem solid #00ff80;
+}
+
+#perfil-spin .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
+  border-left: 0.2rem solid white;
+  border-right: 0.2rem solid white;
+  animation: aboutSpinner 8s linear infinite;
+}
+
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+#plataformas {
+  display: flex;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+#plataformas > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+#plataformas > img:hover {
+  transform: scale(1.25);
+}
+
+#membro {
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  border-top: 0.15rem solid #ffffff67;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.edit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+}
+
+.edit img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.button-edit {
+  background: none;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+#biografiaAndLinks {
+  width: 70%;
+  background-color: #161616;
+  box-shadow: 0 0 0.2rem 0.1rem white;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+#biografiaAndLinks > h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+}
+
+#biografiaAndLinks > p {
+  font-size: 1.6rem;
+}
+
+#links {
+  display: flex;
+  gap: 2rem;
+}
+
+#links > a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  background: #2b2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  z-index: 99;
+  transition: 0.2s ease-in-out;
+}
+
+#links > a:hover {
+  background-color: rgba(128, 128, 128, 0.473);
+}
+
+#links img {
+  width: 3rem;
+  height: 3rem;
+}
+
+#biografia-edit {
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
+#secondPerfil {
+  width: 100%;
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+#pesquisaPerfis {
+  box-shadow: 0 0 0.2rem 0.1rem white;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #161616;
+  width: 40%;
+}
+
+#pesquisaPerfis h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+}
+
+.botao-pesquisa {
+  margin-top: 1rem;
+}
+
+#btn-pesquisa {
+  background-color: black;
+  width: 70%;
+  border: 0.2rem solid #00ff80;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  height: 3.2rem;
+  color: white;
+  padding-left: 3.7rem;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+#image-search {
+  width: 100%;
+  height: 100%;
+}
+
+.imagem-pesquisa {
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  margin-top: -2.6rem;
+  background: none;
+}
+
+#btn-pesquisa:focus {
+  border: 0.2rem solid white;
+}
+#pesquisar {
+  height: 3.2rem;
+  width: 25%;
+  border: 0.2rem solid #00ff80;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1.3rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+#pesquisar:hover {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+#minha-lista {
+  box-shadow: 0 0 0.2rem 0.1rem white;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #161616;
+  width: 60%;
+  max-height: 45rem;
+}
+
+#minha-lista h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+}
+
+#exibir-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cardsList {
+  width: 12.5rem;
+  height: 15rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsList img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.nota {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.733);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.cardsList:hover .nota {
+  opacity: 1;
+}
+
+#minha-lista > a {
+  width: 14rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  border: 0.15rem solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0;
+  margin-top: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+#minha-lista > a:hover {
+  background-color: #2b2a2a;
+}
+
+.cardsUser {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #1c1c1c;
+  box-shadow: 0 0 0.2rem 0.1rem rgba(255, 255, 255, 0.486);
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  transition: 0.2s ease-in-out;
+}
+
+#secondPerfil a {
+  text-decoration: none;
+  color: white;
+}
+
+#secondPerfil a:hover .cardsUser {
+  background-color: #00ff801e;
+}
+
+.cardsUser img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cardsUser h3 {
+  font-size: 1.6rem;
+}
+
+.editor {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.459);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+}
+
+.editor h2 {
+  font-size: 3rem;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+}
+
+.editor-form {
+  width: 50rem;
+  margin-top: 5rem;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  animation: minhaAnimacao 1s ease;
+}
+
+#editarBanner {
+  height: 36.5rem;
+}
+
+.editor-form img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 11rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.carregar-imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+
+.files {
+  display: flex;
+  content: "Carregar Imagem";
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 0 0.1rem 0.1rem white;
+  padding: 1rem 3rem;
+  border-radius: 2.5rem 1rem;
+  cursor: pointer;
+}
+
+.files:hover {
+  background-color: rgba(128, 128, 128, 0.281);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  border-top: 0.1rem solid rgb(51, 49, 49);
+  padding-top: 2rem;
+}
+
+.buttons button {
+  background: none;
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.buttons button:nth-child(2) {
+  background-color: #00ff80d0;
+  box-shadow: 0 0 0.1rem 0.1rem #00ff80;
+  color: white;
+}
+
+.buttons button:nth-child(1) {
+  box-shadow: 0 0 0.1rem 0.1rem red;
+}
+
+.buttons button:hover {
+  background-color: rgba(128, 128, 128, 0.253);
+}
+
+@keyframes minhaAnimacao {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#editarPerfil {
+  height: 55rem;
+  width: 65rem;
+  margin-top: 0.5rem;
+}
+
+#total-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#filesID {
+  justify-content: center;
+  align-items: start;
+}
+
+#perfil-imgs {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+}
+
+#alterarNome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+#alterarNome h3 {
+  font-size: 2rem;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+  margin-left: -5rem;
+}
+
+#alterarNome input {
+  width: 25rem;
+  height: 3rem;
+  border-radius: 1rem;
+  border: 0.15rem solid white;
+  background: none;
+  padding-left: 1.3rem;
+  color: white;
+}
+
+#perfilL1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-right: 0.2rem solid gray;
+  padding-right: 5rem;
+}
+
+#perfilL1 h3 {
+  font-size: 2rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  text-align: center;
+  color: #00ff80;
+}
+
+#tudo {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+}
+
+#perfilPlataformas {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#perfilPlataformas h3 {
+  font-size: 2rem;
+  color: #00ff80;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Estilo do checkbox */
+.checkbox-label {
+  position: relative;
+  padding-left: 4rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo da caixa de seleção personalizada */
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.2rem solid white;
+  border-radius: 0.5rem;
+}
+
+/* Estilo da marca de seleção (quando marcado) */
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+  background-image: url(./icons/check.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+#editarBio {
+  height: 45rem;
+  overflow-y: scroll;
+}
+
+#editarBio h3 {
+  font-size: 2rem;
+  color: white;
+}
+
+#biografiaArea {
+  background-color: rgb(10, 10, 10);
+  border-radius: 1rem;
+  resize: none;
+  margin-top: -1rem;
+  color: white;
+  padding: 1rem 1rem;
+  min-height: 10rem;
+}
+
+#biografiaArea:focus {
+  outline: 0.15rem solid #00ff80;
+}
+
+.redesSociais {
+  display: flex;
+  align-items: center;
+}
+
+.redesSociais input {
+  height: 4rem;
+  width: 32rem;
+  padding: 0 1rem;
+  background-color: black;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  color: white;
+}
+
+.redesSociais input:focus {
+  outline: 0.2rem solid #00ff80;
+}
+.redesSociais span {
+  width: 12rem;
+  background-color: rgb(36, 34, 34);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  height: 4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.redesSociais img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (max-width: 950px) {
+  #perfil {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 3rem;
+  }
+
+  #perfil-principal {
+    width: 100%;
+  }
+
+  #links {
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  #biografiaAndLinks {
+    width: 100%;
+  }
+
+  #secondPerfil {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 3rem;
+  }
+
+  #pesquisaPerfis {
+    width: 100%;
+  }
+
+  #minha-lista {
+    width: 100%;
+    max-height: 120rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #editarPerfil {
+    height: 45rem;
+    overflow-y: scroll;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #tudo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #editarPerfil {
+    width: 50rem;
+    margin-top: 0.5rem;
+  }
+
+  #perfilL1 {
+    border: none;
+    align-items: center;
+  }
+
+  #alterarNome h3 {
+    margin: 0;
+  }
+
+  #alterarNome {
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 0.2rem solid gray;
+    border-bottom: 0.2rem solid gray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #perfilPlataformas {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  #editarPerfil {
+    width: 32rem;
+  }
+
+  #editarBanner {
+    width: 32rem;
+ }
+ #editarBio {
+  width: 32rem;
+ }
+
+ .redesSociais input {
+  width: 27rem;
+  padding: 0 0.5rem;
+ }
+ }

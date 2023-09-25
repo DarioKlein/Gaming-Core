@@ -191,7 +191,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
             if ($row_div2["nome"] !== $nome_jogo_atual) {
               echo '
               <div class="cards">
-                <img src="' . $row_div2["imagem"] . '" alt="" />
+                <img class="imagens-principais" src="' . $row_div2["imagem"] . '" alt="" />
 
                 <div class="title-cards">
                   <h2>

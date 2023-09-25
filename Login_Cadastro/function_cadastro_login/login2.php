@@ -9,12 +9,16 @@ function cadastro($logar, $senha, $email)
 
         $imgPerfil = 'avatar.svg';
         $banner = 'banner.jpg';
-        $instagram = '';
+        $twitch = '';
         $reddit = '';
-        $steam = '';
+        $youtube = '';
         $biografia = '';
-        $query = "INSERT INTO conta (logar, senha, email, imgPerfil, banner, instagram, reddit, steam, biografia)
-        VALUES ('$logar', '$senha', '$email', '$imgPerfil', '$banner', '$instagram', '$reddit', '$steam', '$biografia')";
+        $playstation = 0;
+        $xbox = 0;
+        $switch = 0;
+        $pc = 0;
+        $query = "INSERT INTO conta (logar, senha, email, imgPerfil, banner, twitch, reddit, youtube, biografia, playstation, xbox, pc, switch, data_criacao)
+        VALUES ('$logar', '$senha', '$email', '$imgPerfil', '$banner', '$twitch', '$reddit', '$youtube', '$biografia', '$playstation', '$xbox', '$pc', '$switch', NOW())";
         $inserir = mysqli_query($conectaDB, $query);
         if ($inserir) {
             header("Location: ../login/login.php");
@@ -107,20 +111,27 @@ function logarUsuario($logar, $senha)
 
 
 
-        $query = "SELECT logar, senha, imgPerfil, banner, instagram, reddit, steam, biografia FROM conta;"; // Adicione outras colunas aqui
+        $query = "SELECT logar, senha, imgPerfil, banner, twitch, reddit, youtube, biografia, playstation, xbox, pc, switch, data_criacao FROM conta;"; // Adicione outras colunas aqui
         $consulta = mysqli_query($conectaDB, $query);
         while ($linha = mysqli_fetch_assoc($consulta)) {
             // Verificar se login e senha estão corretos
             if (
                 $logar == $linha["logar"] and $senha == $linha["senha"]
             ) {
-                // Armazenar outros dados do usuário em variáveis de sessão
+                $dataCriacao = strtotime($linha["data_criacao"]);
+                $anoCriacao = date("Y", $dataCriacao);
+
+                $_SESSION['anoCriacao'] = $anoCriacao;
                 $_SESSION['imgPerfil'] = $linha["imgPerfil"];
                 $_SESSION['banner'] = $linha["banner"];
-                $_SESSION['instagram'] = $linha["instagram"];
+                $_SESSION['twitch'] = $linha["twitch"];
                 $_SESSION['reddit'] = $linha["reddit"];
-                $_SESSION['steam'] = $linha["steam"];
+                $_SESSION['youtube'] = $linha["youtube"];
                 $_SESSION['biografia'] = $linha["biografia"];
+                $_SESSION['playstation'] = $linha["playstation"];
+                $_SESSION['xbox'] = $linha["xbox"];
+                $_SESSION['pc'] = $linha["pc"];
+                $_SESSION['switch'] = $linha["switch"];
 
                 header('Location: ../../Paginas/Home/index.php');
                 exit();

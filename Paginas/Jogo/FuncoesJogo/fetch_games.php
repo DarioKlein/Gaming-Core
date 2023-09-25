@@ -11,7 +11,7 @@ if ($result->num_rows > 0) {
   while ($row_div2 = $result->fetch_assoc()) {
     echo '
     <div class="cards">
-      <img src="'. $row_div2["imagem"] .'" alt="" />
+      <img class="imagens-principais" src="'. $row_div2["imagem"] .'" alt="" />
       <div class="title-cards">
         <h2>
           <img id="bolt" src="extraAndImg-jogo/icons/raio.svg" alt="" />

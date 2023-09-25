@@ -169,6 +169,8 @@ nav ul li {
 .img3 {
     width: 5rem;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* MENU LATERAL */
@@ -305,6 +307,23 @@ nav ul li {
     }
 
 } 
+
+/* Scroll Styles */
+
+::-webkit-scrollbar {
+  width: 1rem; /* Largura da barra de rolagem vertical */
+}
+
+/* Estilizar o trilho da barra de rolagem (a área cinza) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Cor de fundo do trilho */
+}
+
+/* Estilizar o polegar da barra de rolagem (a barra em si) */
+::-webkit-scrollbar-thumb {
+  background-color: #00ff80; /* Cor do polegar */
+  border-radius: 6px; /* Borda arredondada do polegar */
+}
 
 
 @media (max-width: 480px) {
