@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opcao4 = 0; 
   }
 
-  $sql = "UPDATE conta SET playstation = $opcao1, xbox = $opcao2, switch = $opcao3, pc = $opcao4 WHERE cod_usuario = '$idUsuario'";
+  $sql = "UPDATE conta SET playstation = $opcao2, xbox = $opcao1, switch = $opcao3, pc = $opcao4 WHERE cod_usuario = '$idUsuario'";
 
   // Execute a consulta de atualização
   $resultado = mysqli_query($conectaDB, $sql);

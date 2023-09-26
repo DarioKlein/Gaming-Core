@@ -1,0 +1,50 @@
+#espaco {
+  height: 4.4rem;
+}
+
+main {
+  min-height: 100vh;
+  padding: 6rem 8rem;
+}
+
+#title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+}
+
+#title > span {
+  color: #00ff80;
+  font-size: 2.7rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.1rem solid white;
+  font-size: 1.6rem;
+  color: white;
+  margin-top: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+td {
+  height: 8rem;
+  border: .1rem solid white;
+  text-align: center;
+}
+
+th {
+  border: .1rem solid white;
+}
+
+img {
+  height: 100%;
+  display: block;
+}
+
+#titleTable{
+  text-align: justify;
+}

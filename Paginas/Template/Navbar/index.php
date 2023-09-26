@@ -17,7 +17,7 @@
              <div class="action-dropdown">
                  <div class="login" onclick="menuToggle()">
                      <?php
-                        echo '<img class="img3" src="../avatarAndBanners/'.$avatar.'" alt="">';
+                        echo '<img class="img3" src="../avatarAndBanners/' . $avatar . '" alt="">';
                         ?>
                  </div>
                  <div class="menu-dropdown">
@@ -26,7 +26,7 @@
                         ?>
                      <ul>
                          <li><img src="../Template/Navbar/imgs-navbar/profile.svg" alt=""><a href="../PerfilUsuario/index.php">Meu perfil</a></li>
-                         <li><img src="../Template/Navbar/imgs-navbar/list.svg" alt="../Perfil/lista.php"><a href="">Minha lista</a></li>
+                         <li><img src="../Template/Navbar/imgs-navbar/list.svg" alt=""><a href="../MinhaLista/index.php">Minha lista</a></li>
                          <li><img src="../Template/Navbar/imgs-navbar/logout.svg" alt=""><a href="../Template/Logout/logout.php">Sair</a></li>
                      </ul>
                  </div>

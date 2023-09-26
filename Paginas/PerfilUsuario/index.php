@@ -34,7 +34,7 @@ $anoCriacao = $_SESSION['anoCriacao'];
   include('../Template/references/ref.php');
   ?>
 
-  <title>Gaming Core - Perfil</title>
+  <title><?php echo $username; ?> - Perfil</title>
 
   <link rel="stylesheet" href="../Template/Footer/style.css" />
   <link rel="stylesheet" href="../Template/Navbar/style.css" />
@@ -251,7 +251,7 @@ $anoCriacao = $_SESSION['anoCriacao'];
             $avatar = $resultado['imgPerfil']; // Suponhamos que a tabela tenha um campo para o avatar
 
             // Exiba o card com os detalhes do usuário
-            echo '<a href="">
+            echo '<a href="../PerfilOutro/index.php?nomeUsuario='.$nome_usuario.'">
           <div class="cardsUser">
             <img src="../avatarAndBanners/' . $avatar . '" alt="">
             <h3>' . $nome_usuario . '</h3>
