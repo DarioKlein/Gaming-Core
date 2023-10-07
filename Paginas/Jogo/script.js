@@ -119,7 +119,8 @@ function like(commentId) {
           // Após a confirmação do banco, atualize a contagem de likes no elemento
           const likeCount = parseInt(likeCountElement.textContent) + 1
           likeCountElement.textContent = likeCount
-          likeButton.querySelector("img").src = "extraAndImg-jogo/icons/liked.svg"
+          likeButton.querySelector("img").src =
+            "extraAndImg-jogo/icons/liked.svg"
         } else {
           // Trate o caso em que a confirmação do banco de dados falhou
           console.error("Falha na confirmação do banco de dados.", response)
@@ -160,7 +161,8 @@ function deslike(commentId) {
           // Após a confirmação do banco, atualize a contagem de deslikes no elemento
           const deslikeCount = parseInt(deslikeCountElement.textContent) + 1
           deslikeCountElement.textContent = deslikeCount
-          deslikeButton.querySelector("img").src = "extraAndImg-jogo/icons/Desliked.svg"
+          deslikeButton.querySelector("img").src =
+            "extraAndImg-jogo/icons/Desliked.svg"
         } else {
           // Trate o caso em que a confirmação do banco de dados falhou
           console.error("Falha na confirmação do banco de dados.", response)
@@ -213,5 +215,45 @@ $(document).ready(function () {
         $("#loading-animation").hide() // Oculta a animação de carregamento após o carregamento dos dados
       },
     })
+  })
+})
+
+// Minha Lista Adicionamento
+
+const buttonLista = document.querySelector("#adicionaJogosLista")
+
+buttonLista.addEventListener("click", () => {
+  const nomeJogo = buttonLista.getAttribute("nomeDoJogo")
+  const nomeUsuario = buttonLista.getAttribute("nomeDoUsuario")
+  const nota = "N.A"
+  const progresso = "Quero Jogar"
+  const imagemJogo = buttonLista.getAttribute("imagemJogo")
+  const nomeImagem = imagemJogo.split("extraAndImg-jogo/imgPrincipal/").join("")
+  let imagem = "../jogo/extraAndImg-jogo/imgPrincipal/"
+  const enderecoImagem = imagem + nomeImagem
+
+  console.log("Dados a serem enviados:")
+  console.log("Nome do Jogo:", nomeJogo)
+  console.log("Nome do Usuário:", nomeUsuario)
+  console.log("Nota:", nota)
+  console.log("Progresso:", progresso)
+  console.log("Endereço da Imagem:", enderecoImagem)
+
+  $.ajax({
+    type: "POST",
+    url: "FuncoesJogo/adicionarLista.php",
+    data: {
+      nomeJogo: nomeJogo,
+      nomeUsuario: nomeUsuario,
+      progresso: progresso,
+      nota: nota,
+      enderecoImagem: enderecoImagem,
+    },
+    success: function () {
+      
+    },
+    error: function (error) {
+      console.error("Erro ao enviar dados: " + error.responseText)
+    },
   })
 })

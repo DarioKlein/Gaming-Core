@@ -651,7 +651,7 @@ h1 {
     .avaliacao-mobile span {
         color: #00ff88;
         background-color: transparent;
-
+        margin-left: 0.5rem;
     }
 
     .espaco-mobile {

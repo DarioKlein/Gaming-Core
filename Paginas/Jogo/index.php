@@ -46,7 +46,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
     <?php
     $genero_atual = "";
     $nome_jogo_atual = "";
-    $sql = "SELECT nome, data_lanc, plataformas, genero1, genero2, linkVideo, imagemJogo, imagemVideo, imagemSecundaria1, imagemSecundaria2, resumo, developer, curiosidade FROM games WHERE cod_jogo = $idJogo";
+    $sql = "SELECT cod_jogo, nome, data_lanc, plataformas, genero1, genero2, linkVideo, imagemJogo, imagemVideo, imagemSecundaria1, imagemSecundaria2, resumo, developer, curiosidade, nota FROM games WHERE cod_jogo = $idJogo";
 
     $result_div = $conn->query($sql);
 
@@ -63,7 +63,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
         </div>
         <div class="avaliacao" id="av1">
           <h2>Avaliação dos usuários</h2>
-          <p><img src="extraAndImg-jogo/icons/star-all.svg" alt="" />8.7</p>
+          <p><img src="extraAndImg-jogo/icons/star-all.svg" alt="" />' . $row_div["nota"] . '</p>
         </div>
   
         <div class="avaliacao" id="av2">
@@ -142,7 +142,12 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
         </div>
 
         <div class="button">
-          <button>
+          <button
+            id="adicionaJogosLista"
+            nomeDoUsuario="' . $username . '"
+            nomeDoJogo="' . $nome_jogo_atual . '" 
+            imagemJogo="' . $row_div["imagemJogo"] . '"
+          >
             <img src="extraAndImg-jogo/icons/add.svg" alt="" />
             Adicionar à Lista
           </button>
@@ -158,7 +163,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
         <div class="avaliacao" id="av3">
           <h2>Avaliação dos usuários</h2>
-          <p id="para"><img src="extraAndImg-jogo/icons/star-all.svg" alt="" />8.7</p>
+          <p id="para"><img src="extraAndImg-jogo/icons/star-all.svg" alt="" />' . $row_div["nota"] . '</p>
         </div>
       </div>
 
@@ -201,7 +206,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
                 </div>
 
                 <div class="notas-cards">
-                  <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" /> 9.7</p>
+                  <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" /> ' . $row_div2["nota"] . '</p>
                 </div>
 
                 <a href="' . $row_div2["endereco"] . '">
@@ -227,7 +232,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
                   <div class="avaliacao-mobile">
                     <img src="extraAndImg-jogo/icons/star.svg" alt="" />
-                    <p>8.7</p>
+                    <p>' . $row_div2["nota"] . '</p>
                   </div>
                   <button class="add-mobile">
                     <img class="add-mobile" src="extraAndImg-jogo/icons/add.svg" alt="" /> Adicionar
@@ -293,7 +298,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
         echo '
         <div class="comentarios-adicioandos">
-            <div class="img-usuario" style="background-image: url(../avatarAndBanners/'. $row_comentarios['imagemPerfil'].')"></div>
+            <div class="img-usuario" style="background-image: url(../avatarAndBanners/' . $row_comentarios['imagemPerfil'] . ')"></div>
             <div class="comentarios-dentro">
                 <span>' . $row_comentarios['usuario'] . ' <h4> ', $data_formatada, '</span>
                 <p>

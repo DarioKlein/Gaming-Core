@@ -183,11 +183,11 @@ $genreFilter = $_GET['genre'] ?? '';
             $searchQuery = $_POST['search_query'] ?? '';
             if (!empty($searchQuery)) {
                 $searchQuery = mysqli_real_escape_string($conn, $searchQuery); // Sanitize input
-                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, imagem FROM jogos WHERE nome LIKE '%$searchQuery%'";
+                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, nota, imagem FROM jogos WHERE nome LIKE '%$searchQuery%'";
             } elseif (!empty($genreFilter)) {
-                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, imagem FROM jogos WHERE genero = '$genreFilter'";
+                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, nota, imagem FROM jogos WHERE genero = '$genreFilter'";
             } else {
-                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, imagem FROM jogos";
+                $sql_div = "SELECT cod_jogo, nome, data_lanc, genero, endereco, nota, imagem FROM jogos";
             }
 
             if ($sort === 'name_asc') {
@@ -219,7 +219,7 @@ $genreFilter = $_GET['genre'] ?? '';
                         <div class="avaliacao-mobile">
                             <p>
                             <img src="extra-jogos
-                            /star.svg" alt=""> Avaliação: <span>--</span>
+                            /star.svg" alt=""> Avaliação:  <span>  '  . $row_div["nota"] . ' </span>
                             </p>
                         </div>
                         <div class="espaco-mobile"> </div>

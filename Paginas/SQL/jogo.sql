@@ -16,7 +16,8 @@ imagemSecundaria1 varchar(100),
 imagemSecundaria2 varchar(100),
 resumo varchar(255),
 developer varchar(70),
-curiosidade varchar(255)
+curiosidade varchar(255),
+nota varchar(255)
 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 INSERT INTO games (
@@ -32,7 +33,8 @@ INSERT INTO games (
     imagemSecundaria2,
     resumo,
     developer,
-    curiosidade
+    curiosidade,
+    nota
 ) VALUES (
     "The Witcher 3: Wild Hunt",
     "18 de maio de 2015",
@@ -46,7 +48,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/tw3_1.jpg",
     "O jogo conta a aventura do bruxo Geralt de Rívia em busca da sua filha, Ciri, enquanto enfrenta inimigos mortais e explora um mundo cheio de possibilidades, desafios e aventuras.",
     "CD PROJEKT RED.",
-    "Eleito melhor jogo do ano em 2015 pelo The Game Awards."
+    "Eleito melhor jogo do ano em 2015 pelo The Game Awards.",
+    "N.A"
 ),
 
 (
@@ -62,7 +65,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/rdr2Secundaria2.webp",
     "Red Dead Redemption 2 é um jogo de ação em mundo aberto. Siga a história de Arthur Morgan, um fora da lei, em sua jornada no velho oeste americano. Enfrente desafios, tome decisões difíceis e explore um vasto mundo repleto de oportunidades e perigos.",
     "ROCKSTAR GAMES.",
-    "Vendeu mais de US$ 725 milhões em cópias em todo o mundo."
+    "Vendeu mais de US$ 725 milhões em cópias em todo o mundo.",
+    "N.A"
 ),
 
 (
@@ -78,7 +82,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/gtav2.jpg",
     "Os protagonistas do jogo que se passa em Los Santos, uma sátira de Los Angeles, onde você controla Michael De Santa, um ex-assaltante de bancos; Franklin Clinton, um jovem em busca de oportunidades criminosas; e Trevor Philips, um psicopata.",
     "ROCKSTAR GAMES.",
-    "Eleito melhor jogo do ano em 2013 pelo The Game Awards."
+    "Eleito melhor jogo do ano em 2013 pelo The Game Awards.",
+    "N.A"
 ),
 
 (
@@ -94,7 +99,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/hog2.webp",
     "O jogador controla um aluno matriculado na Escola de Magia e Bruxaria de Hogwarts que aprende a manejar uma série de habilidades e objetos mágicos. Com a ajuda de colegas e professores, a protagonista embarca em uma jornada.",
     "AVALANCHE SOFTWARE.",
-    "Jogo baseado na obra fictícia de J.K Rowling Harry Potter."
+    "Jogo baseado na obra fictícia de J.K Rowling Harry Potter.",
+    "N.A"
 ),
 
 (
@@ -110,7 +116,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/cyber2.webp",
     "Na trama, o jogador controla um mercenário personalizável chamado V, capaz de adquirir habilidades de hacking e maquinários, além de um arsenal de armas de longo alcance e diferentes opções de combate.",
     "CD PROJEKT RED.",
-    "Uma das maiores decepções da história dos games, sofreu com diversos problemas no lançamento."
+    "Uma das maiores decepções da história dos games, sofreu com diversos problemas no lançamento.",
+    "N.A"
 ),
 
 (
@@ -126,8 +133,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/re4remake2.webp",
     "Se passa 6 anos após os acontecimentos de Raccoon City e traz Leon Kennedy em uma missão para resgatar a filha do presidente dos Estados Unidos, Ashley Graham, que foi sequestrada por uma seita macabra chamada Los Illuminados.",
     "Capcom.",
-    "Resident Evil 4 Remake é uma reimaginação espetacular de um dos jogos mais icônicos de todos os tempos o resident evil 4."
-
+    "Resident Evil 4 Remake é uma reimaginação espetacular de um dos jogos mais icônicos de todos os tempos o resident evil 4.",
+    "N.A"
 ),
 
 (
@@ -143,7 +150,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/dark32.webp",
     "Com o início da história de Dark Souls 3, o misterioso herói escolhido acorda da morte em um cemitério com alguns hollows, milhares de anos após a extinção dos seres dracônicos. Ele, então, ainda sem rumo, segue seu caminho.",
     "FROM SOFTWARE.",
-    "Alcançou sozinho a marca de 10 milhões de unidades vendidas mundialmente"
+    "Alcançou sozinho a marca de 10 milhões de unidades vendidas mundialmente",
+    "N.A"
 ),
 
 (
@@ -159,8 +167,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/deadspace2.jpg",
     "Isaac Clarke é um engenheiro com a missão de consertar uma imensa nave de mineração, mas descobre que a tripulação foi massacrada e sua amada está perdida em algum lugar.",
     "Electronic Arts.",
-    "Foram necessários quase 3 anos para completar o desenvolvimento de Dead Space Remake."
-
+    "Foram necessários quase 3 anos para completar o desenvolvimento de Dead Space Remake.",
+    "N.A"
 ),
 
 (
@@ -176,7 +184,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/star2.jpg",
     "Você se juntará ao Constellation - o último grupo de exploradores espaciais que busca de artefatos raros por toda a galáxia - e navegará pela vasta extensão do espaço no maior e mais ambicioso jogo da Bethesda Game Studios.",
     "BETHESDA.",
-    "Fez com que as vendas do Xbox series aumentassem em 1000%"
+    "Fez com que as vendas do Xbox series aumentassem em 1000%",
+    "N.A"
 ),
 
 (
@@ -192,7 +201,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/liesofp2.jpeg",
     "É ambientado em Krat, a cidade da ciência e tecnologia, que passou por diversos avanços após a descoberta do Ergo, material que foi usado como fonte de energia para alimentar a cidade e os títeres.",
     "Neowiz Games, Sold Out Sales & Marketing Ltd.",
-    "Ainda não foi lançado."
+    "Ainda não foi lançado.",
+    "N.A"
 
 ),
 
@@ -209,7 +219,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/avatar2.webp",
     "Avatar: Frontiers of Pandora conta a história de um Navi que foi raptado quando criança pela corporação militar dos humanos. Portanto ele consegue lidar com armas de fogo tradicionais, bem como as habilidades de sua raça.",
     "Ubisoft.",
-    "Ainda não foi lançado."
+    "Ainda não foi lançado.",
+    "N.A"
 ),
 
 (
@@ -225,7 +236,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/mirage2.jpg",
     "Em Assassin's Creed Mirage, você é Basim, um astucioso ladino de rua com visões aterrorizantes e que está em busca de respostas e de justiça. Entre para uma organização antiga e compreenda um novo credo...",
     "Ubisoft.",
-    "Ainda não foi lançado."
+    "Ainda não foi lançado.",
+    "N.A"
 ),
 
 (
@@ -241,7 +253,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/mortalkombat2.webp",
     "O jogo continua a história que vimos ao final de Aftermath, a expansão de Mortal Kombat 11. Aqui, Liu Kang se tornou o deus do trovão e do fogo, no lugar de Raiden, e decidiu usar seus poderes cósmicos para refazer o universo caótico ao seu redor.",
     "Warner Bros. Games",
-    "O jogo foi recém lançado."
+    "O jogo foi recém lançado.",
+    "N.A"
 ),
 
 (
@@ -257,7 +270,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/alanwake2.avif",
     "O que começa como uma investigação de assassinato em uma cidade pequena rapidamente se transforma em uma jornada de pesadelo. Descubra a fonte da escuridão sobrenatural nesta história de terror psicológico cheia de suspense.",
     "Remedy Entertainment",
-    "O jogo ainda não foi lançado"
+    "O jogo ainda não foi lançado",
+    "N.A"
 ),
 
 (
@@ -273,7 +287,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/spider2.jpg",
     "É um jogo para uma pessoa. Mas é possível jogar tanto como Peter Parker quanto como Miles Morales, revezando entre os dois Spiders em suas aventuras contra o crime para aproveitar as habilidades de jogo e elementos da história de cada um.",
     "Sony Interactive Entertainment",
-    "Ainda não foi lançado"
+    "Ainda não foi lançado",
+    "N.A"
 ),
 
 (
@@ -289,7 +304,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/payday32.png",
     "Um ex-criminoso aposentado é convocado para se juntar à infame Gangue Payday, conhecida pela rivalidade com outras gangues e pelo temor que inspira na polícia. Anos após deixarem a vida de crime em Washington.",
     "Starbreeze Studios, Overkill Software",
-    "O jogo ainda não foi lançado"
+    "O jogo ainda não foi lançado",
+    "N.A"
 ),
 
 (
@@ -305,7 +321,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/forza2.jpg",
     "Forza Motorsport é descrito pelo estúdio como, “O jogo de corrida tecnicamente mais avançado já feito”, e será responsável por apresentar conceitos construídos do zero, sem reaproveitamento de títulos anteriores.",
     "Xbox Game Studios",
-    "Este será o último título da série, visto que este será atualizado constantemente"
+    "Este será o último título da série, visto que este será atualizado constantemente",
+    "N.A"
 ),
 
 (
@@ -321,7 +338,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/pragmata2.webp",
     "Retrata um mundo distópico futuro na Lua através de uma história e um cenário extremamente profundos.",
     "Capcom",
-    "Faz mais de 2 anos que o jogo foi anunciado mais ainda não sabemos praticamente nada sobre o projeto."
+    "Faz mais de 2 anos que o jogo foi anunciado mais ainda não sabemos praticamente nada sobre o projeto.",
+    "N.A"
 ),
 
 (
@@ -337,7 +355,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/skull2.jpeg",
     "O mundo de Skull and Bones é um tesouro a ser explorado. Durante sua viagem, você enfrentará vários desafios, desde o clima imprevisível e as ondas perigosas, até animais letais e caçadores de piratas impiedosos.",
     "UBISOFT.",
-    "Está a mais de 10 anos sendo desenvolvido e ainda não se tem certeza que ele será lançado"
+    "Está a mais de 10 anos sendo desenvolvido e ainda não se tem certeza que ele será lançado",
+    "N.A"
 ),
 
 (
@@ -353,7 +372,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/immortals2.jpg",
     "O jogador assume o controle de Jak, um jovem com a habilidade rara de controlar os três tipos de magia presentes no mundo de Aveum. Por isso, ele se torna peça central na Guerreterna.",
     "Ascendant Studios",
-    "Produtora de Immortals of Aveum demite metade da equipe após fracasso comercial."
+    "Produtora de Immortals of Aveum demite metade da equipe após fracasso comercial.",
+    "N.A"
 ),
 
 (
@@ -369,7 +389,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/elden2.jpg",
     "O jogador incorpora um Maculado, guerreiro guiado pela força da Graça para portar o poder do Anel Prístino e torna-se um Lorde Prístino. A trama tem como cenário as Terras Intermédias, um local governado pela Rainha Marika.",
     "FROM SOFTWARE.",
-    "Melhor jogo do ano de 2022, eleito pelo THE GAME AWARDS."
+    "Melhor jogo do ano de 2022, eleito pelo THE GAME AWARDS.",
+    "N.A"
 ),
 
 (
@@ -385,7 +406,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/thelastofus22.jpg",
     "The Last of Us Part II é a busca de Ellie por vingança pela morte de Joel em um mundo pós-apocalíptico. A narrativa também segue a história de Abby, que busca redenção. Ambas escolhem o perdão em um confronto.",
     "Naughty Dog",
-    "The Last of Us 2 é o jogo mais premiado da história"
+    "The Last of Us 2 é o jogo mais premiado da história",
+    "N.A"
 ),
 
 (
@@ -401,7 +423,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/zelda2.jpg",
     "Depois da derrota de Calamity Ganon, Link consegue libertar Zelda e eles se aventuram pelo castelo de Hyrule - onde encontram um corpo mumificado que parece o de Ganondorf.",
     "NINTENDO.",
-    "Melhor jogo do ano de 2023, eleito pelo THE GAME AWARDS."
+    "Melhor jogo do ano de 2023, eleito pelo THE GAME AWARDS.",
+    "N.A"
 ),
 
 (
@@ -417,7 +440,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/fh2.jpg",
     "Forza Horizon 5 é um jogo de corrida arcade em mundo aberto, que celebra a alegria de dirigir num ambiente festivo com carros velozes e total liberdade. Esta edição do festival é ambientada no México, quente e latino.",
     "XBOX GAME STUDIOS.",
-    "Melhor jogo de corrida de 2021, eleito pelo THE GAME AWARDS."
+    "Melhor jogo de corrida de 2021, eleito pelo THE GAME AWARDS.",
+    "N.A"
 ),
 
 (
@@ -433,7 +457,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/sekiro2.jpg",
     "Sekiro: Shadows Die Twice se passa no Japão durante a violenta era Sengoku. A trama começa com uma batalha pelo poder em Ashina. Conhecemos Sekiro, uma criança adotada e treinada como shinobi por Coruja.",
     "FromSoftware",
-    "Melhor jogo do ano em 2019, eleito pelo THE GAME AWARDS."
+    "Melhor jogo do ano em 2019, eleito pelo THE GAME AWARDS.",
+    "N.A"
 ),
 
 (
@@ -449,7 +474,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/val2.jpeg",
     "História segue a jornada de Eivor da Noruega para a Inglaterra, e buscando construir uma nova casa para seu clã viking, formando alianças para assumir os quatro reinos ao seu redor.",
     "UBISOFT.",
-    "Assassin's Creed Valhalla ultrapassou a marca de 20 milhões de jogadores."
+    "Assassin's Creed Valhalla ultrapassou a marca de 20 milhões de jogadores.",
+    "N.A"
 ),
 
 (
@@ -465,7 +491,8 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/gta32.webp",
     "Durante um assalto em um banco de Liberty City, o ambicioso criminoso Claude é baleado e atingido por sua namorada e cúmplice Catalina (Cynthia Farrell). Apesar de ter sobrevivido ao tiro, é preso e sentenciado a dez anos de prisão.",
     "Rockstar North, Grove Street Games, DMA Design",
-    "Gta III é o precurssor dos jogos em mundo aberto no estilo de câmera em 3ª pessoa"
+    "Gta III é o precurssor dos jogos em mundo aberto no estilo de câmera em 3ª pessoa",
+    "N.A"
 ),
 
 (
@@ -481,6 +508,7 @@ INSERT INTO games (
     "extraAndImg-jogo/imgSecundaria/re2.jpg",
     "Resident Evil 2 conta a trágica história de Raccoon City, que começa alguns meses depois do Incidente da Mansão, onde os membros dos S.T.A.R.S. descobrem as atividades ilegais da Umbrella envolvendo a produção de armas biológicas.",
     "Capcom.",
-    "Resident evil 2 remake é um dos melhores remakes já feitos na história"
+    "Resident evil 2 remake é um dos melhores remakes já feitos na história",
+    "N.A"
 )
 ;

@@ -15,11 +15,11 @@ if ($result->num_rows > 0) {
       <div class="title-cards">
         <h2>
           <img id="bolt" src="extraAndImg-jogo/icons/raio.svg" alt="" />
-          '. $row_div2["nome"] .'
+          '. $row_div2["nome"] . '
         </h2>
       </div>
       <div class="notas-cards">
-        <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" /> 9.7</p>
+        <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" />' . $row_div2["nota"] .'</p>
       </div>
       <a href="'. $row_div2["endereco"] .'">
         <img id="add-button" src="extraAndImg-jogo/icons/add.svg" alt="" />Veja Mais
@@ -34,11 +34,11 @@ if ($result->num_rows > 0) {
                   <img src="'. $row_div2["imagem"] .'" alt="" />
                 </div>
                 <div class="conteudo-mobile">
-                  <div class="title-mobile">'. $row_div2["nome"] .'</div>
+                  <div class="title-mobile">'. $row_div2["nome"] . '</div>
 
                   <div class="avaliacao-mobile">
                     <img src="extraAndImg-jogo/icons/star.svg" alt="" />
-                    <p>8.7</p>
+                    <p>' . $row_div2["nota"] . '</p>
                   </div>
                   <button class="add-mobile">
                     <img class="add-mobile" src="extraAndImg-jogo/icons/add.svg" alt="" /> Adicionar
