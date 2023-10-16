@@ -126,7 +126,7 @@ $anoCriacao = $_SESSION['anoCriacao'];
               } else {
                 echo '<input type="checkbox" name="opcao4" value="Opção 4"> PC';
               } ?>
-              
+
               <span class="custom-checkbox"></span>
             </label><br>
           </div>
@@ -251,7 +251,7 @@ $anoCriacao = $_SESSION['anoCriacao'];
             $avatar = $resultado['imgPerfil']; // Suponhamos que a tabela tenha um campo para o avatar
 
             // Exiba o card com os detalhes do usuário
-            echo '<a href="../PerfilOutro/index.php?nomeUsuario='.$nome_usuario.'">
+            echo '<a href="../PerfilOutro/index.php?nomeUsuario=' . $nome_usuario . '">
           <div class="cardsUser">
             <img src="../avatarAndBanners/' . $avatar . '" alt="">
             <h3>' . $nome_usuario . '</h3>
@@ -267,28 +267,26 @@ $anoCriacao = $_SESSION['anoCriacao'];
       </div>
 
       <div id="minha-lista">
-        <h2>JOGOS FAVORITOS</h2>
+        <h2>MELHORES AVALIAÇÕES</h2>
         <div id="exibir-cards">
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+          <?php
+          include('../DatabaseConect/conexao.php');
+          $sqlJogosFavorios = "SELECT * FROM actionslista WHERE username = '$username' ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS UNSIGNED) END DESC LIMIT 5";
+          $resultJogosFavoritos = $conn->query($sqlJogosFavorios);
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+          if ($resultJogosFavoritos->num_rows > 0) {
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+            while ($rowFavoritos = $resultJogosFavoritos->fetch_assoc()) {
+              echo ' <div class="cardsList">
+            <img src="' . $rowFavoritos["imagem"] . '" alt="">
+            <span class="nota">Nota: ' . $rowFavoritos["nota"] . '</span>
+          </div>';
+            }
+          } else {
+            echo '<h3 id="naoTemJogo">Você ainda não tem nenhum jogo na sua lista.</h2>';
+          }
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
-
+          ?>
 
         </div>
         <a href="">Ver Lista</a>

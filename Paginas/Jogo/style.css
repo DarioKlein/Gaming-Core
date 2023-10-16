@@ -519,7 +519,7 @@
   width: 70%;
   margin-top: 3rem;
   margin-left: 5%;
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
 
@@ -953,6 +953,54 @@ form {
   height: 3rem;
 }
 
+#removeJogosLista {
+  border: 0.15rem solid red;
+}
+
+#removeJogosLista > img {
+  margin-left: 1rem;
+}
+
+.cardDeAviso {
+  position: fixed;
+  width: 35rem;
+  height: 8rem;
+  background: rgb(239, 236, 236);
+  background-size: 400px 600px;
+  z-index: 9999;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.cardDeAviso > hr {
+  width: 0;
+  height: 0.5rem;
+  background: #00ff88;
+  border: none;
+  position: absolute;
+  top: 91%;
+  border-radius: 0.5rem;
+}
+
+@keyframes animacaoCard {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .explore-more {
     width: 70%;
@@ -1099,8 +1147,8 @@ form {
   }
 }
 
-@media (max-width: 768px) { 
- .header-container-jogo {
+@media (max-width: 768px) {
+  .header-container-jogo {
     grid-template-areas:
       ". . . ."
       "title title title title"
@@ -1187,8 +1235,7 @@ form {
       "resumo resumo"
       "developer developer"
       "curiosidade curiosidade"
-      "avaliar button2"
-      ;
+      "avaliar button2";
   }
 
   .button {
@@ -1338,11 +1385,10 @@ form {
   .explore-more {
     width: 100%;
   }
-
 }
 
-@media (max-width: 480px) { 
- .button button,
+@media (max-width: 480px) {
+  .button button,
   .button p,
   #av3 h2,
   .button2 a {
@@ -1370,5 +1416,4 @@ form {
   .comentarios-dentro {
     width: 80%;
   }
-
 }

@@ -324,7 +324,7 @@ main {
 }
 
 .cardsList {
-  width: 12.5rem;
+  width: 12rem;
   height: 15rem;
   position: relative;
   display: flex;
@@ -403,6 +403,10 @@ main {
 
 #secondPerfil a:hover .cardsUser {
   background-color: #00ff801e;
+}
+
+#naoTemJogo {
+  font-size: 2rem;
 }
 
 .cardsUser img {

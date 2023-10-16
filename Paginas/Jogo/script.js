@@ -220,24 +220,16 @@ $(document).ready(function () {
 
 // Minha Lista Adicionamento
 
-const buttonLista = document.querySelector("#adicionaJogosLista")
-
-buttonLista.addEventListener("click", () => {
-  const nomeJogo = buttonLista.getAttribute("nomeDoJogo")
-  const nomeUsuario = buttonLista.getAttribute("nomeDoUsuario")
+const buttonAdicionar = document.getElementById("adicionaJogosLista")
+buttonAdicionar.addEventListener("click", () => {
+  const nomeJogo = buttonAdicionar.getAttribute("nomeDoJogo")
+  const nomeUsuario = buttonAdicionar.getAttribute("nomeDoUsuario")
   const nota = "N.A"
   const progresso = "Quero Jogar"
-  const imagemJogo = buttonLista.getAttribute("imagemJogo")
+  const imagemJogo = buttonAdicionar.getAttribute("imagemJogo")
   const nomeImagem = imagemJogo.split("extraAndImg-jogo/imgPrincipal/").join("")
   let imagem = "../jogo/extraAndImg-jogo/imgPrincipal/"
   const enderecoImagem = imagem + nomeImagem
-
-  console.log("Dados a serem enviados:")
-  console.log("Nome do Jogo:", nomeJogo)
-  console.log("Nome do Usuário:", nomeUsuario)
-  console.log("Nota:", nota)
-  console.log("Progresso:", progresso)
-  console.log("Endereço da Imagem:", enderecoImagem)
 
   $.ajax({
     type: "POST",
@@ -250,10 +242,58 @@ buttonLista.addEventListener("click", () => {
       enderecoImagem: enderecoImagem,
     },
     success: function () {
-      
+      buttonAdicionar.disabled = true
+      const cardAviso = document.querySelector(".cardDeAviso")
+      cardAviso.style.transform = ('translateX(0)')
+      const h2 = cardAviso.querySelector('h2')
+      h2.innerText = 'Jogo Adicionado'
+      const efeito = document.getElementById("linhaEfeito")
+      efeito.style.animation = "animacaoCard 3s linear"
+      setTimeout(() => {
+        const cardAviso = document.querySelector(".cardDeAviso")
+        cardAviso.style.transform = "translateX(100%)"
+      }, 3000)
+
+      setTimeout(() => {
+        location.reload()
+      }, 4000)
     },
     error: function (error) {
       console.error("Erro ao enviar dados: " + error.responseText)
     },
   })
 })
+
+function removeLista() {
+    const buttonRemover = document.getElementById("removeJogosLista")
+    const nomeJogo = buttonRemover.getAttribute("nomeDoJogo")
+    const nomeUsuario = buttonRemover.getAttribute("nomeDoUsuario")
+    $.ajax({
+      type: "POST",
+      url: "FuncoesJogo/removerLista.php",
+      data: {
+        nomeJogo: nomeJogo,
+        nomeUsuario: nomeUsuario
+      },
+      success: function () {
+         buttonRemover.disabled = true
+         const cardAviso = document.querySelector(".cardDeAviso")
+         cardAviso.style.transform = "translateX(0)"
+         const h2 = cardAviso.querySelector("h2")
+         h2.innerText = "Jogo Removido"
+         const efeito = document.getElementById("linhaEfeito")
+         efeito.style.animation = "animacaoCard 3s linear"
+         setTimeout(() => {
+           const cardAviso = document.querySelector(".cardDeAviso")
+           cardAviso.style.transform = "translateX(100%)"
+         }, 3000)
+
+         setTimeout(() => {
+           location.reload()
+         }, 4000)
+      },
+      error: function (error) {
+        console.error("Erro ao enviar dados: " + error.responseText)
+      },
+    })
+}

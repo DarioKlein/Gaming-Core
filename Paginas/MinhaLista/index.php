@@ -66,9 +66,14 @@ include('../DatabaseConect/conexao.php');
       </div>
 
       <?php
-      $sql = "SELECT * FROM actionsLista where username = '$username'";
+      $searchQuery = $_POST['search_query'] ?? '';
+      if (!empty($searchQuery)) {
+        $searchQuery = mysqli_real_escape_string($conn, $searchQuery);
+        $sql = "SELECT * FROM actionsLista where username = '$username' AND jogo LIKE '%$searchQuery%'";
+      } else {
+        $sql = "SELECT * FROM actionsLista where username = '$username'";
+      }
 
-      // Execute a consulta SQL
       $result = $conn->query($sql);
 
       // Verifique se há resultados
@@ -77,16 +82,19 @@ include('../DatabaseConect/conexao.php');
         while ($row = $result->fetch_assoc()) {
           echo '
            <div class="cards">
-            <span class="style-container idJogo">'.$contador.'</span>
+            <span class="style-container idJogo">' . $contador . '</span>
             <img class="style-container imgJogo" src="' . $row['imagem'] . '" alt="">
-            <h2 class="style-container titleJogo">' . $row['jogo'] . '</h2>
+            <h2 id="gameName' . $contador . '" class="style-container titleJogo">' . $row['jogo'] . '</h2>
             <p class="style-container notajogo">' . $row['nota'] . '</p>
             <p class="style-container progress">' . $row['progresso'] . '</p>
-           <button class="style-container edit-button">EDITAR</button>
+            <div class="style-container buttonsEditar">
+            <button index=' . $contador . ' class="edit-button"></button>
+            <button numerador=' . $contador . ' class="remove-button"></button>
+            </div>
           </div>
            ';
 
-           $contador++;
+          $contador++;
         }
       } else {
         echo '
@@ -113,11 +121,11 @@ include('../DatabaseConect/conexao.php');
         while ($row2 = $result2->fetch_assoc()) {
           echo '
             <div class="cards-mobile">
-              <h2><span>'.$contador2.'. </span>' . $row2['jogo'] . '</h2>
+              <h2 id="gameName2' . $contador2 . '"><span>' . $contador2 . '. </span>' . $row2['jogo'] . '</h2>
               <img src="' . $row2['imagem'] . '" alt="">
               <p><span>Nota:</span>' . $row2['nota'] . '</p>
               <p id="progresso-mobile"><span>Progresso:</span>' . $row2['progresso'] . '</p>
-              <p>Alterar: <button class="edit-button">Editar</button></p>
+              <p>Alterar: <button index=' . $contador2 . ' class="edit-button2"></button> <button numerador=' . $contador2 . ' class="remove-button2"></button</p>
             </div>
           ';
 
@@ -134,7 +142,9 @@ include('../DatabaseConect/conexao.php');
     </div>
 
     <div id="editarLista">
-      <form class="editItems" id="editarInputs" method="POST" action="">
+      <form class="editItems" id="editarInputs" method="POST" action="functions/atualizarLista.php">
+        <input type="hidden" id="gameName" name="data-game-name" value="">
+        <input type="hidden" name="username" value="<?php echo $username; ?>">
         <h2>EDITAR</h2>
         <div id="alterarCampos">
           <div id="inputNota">
@@ -142,21 +152,21 @@ include('../DatabaseConect/conexao.php');
             <input type="text" name="nota" id="nota" maxlength="2" oninput="validarNota(this)" require>
           </div>
 
-          <input type="radio" id="radio1" name="status" value="zerado">
+          <input type="radio" id="radio1" name="status" value="Já Zerei">
           <label class="radioPersonalizado" for="radio1"><span class="itemsInput">Já Zerei</span></label>
 
 
-          <input type="radio" id="radio2" name="status" value="incompleto">
+          <input type="radio" id="radio2" name="status" value="Estou Jogando">
           <label class="radioPersonalizado" for="radio2"><span class="itemsInput">Estou Jogando</span></label>
 
-          <input type="radio" id="radio3" name="status" value="queroJogar">
+          <input type="radio" id="radio3" name="status" value="Quero Jogar" checked>
           <label class="radioPersonalizado" for="radio3"><span class="itemsInput">Quero Jogar</span></label>
 
-          <input type="radio" id="radio4" name="status" value="platinado">
+          <input type="radio" id="radio4" name="status" value="100%">
           <label class="radioPersonalizado" for="radio4"><span class="itemsInput">100%</span></label>
         </div>
         <div class="buttons">
-          <button type="button" id="cancelar">
+          <button type="button" id="cancelar" class="cancelarAcao">
             Cancelar
           </button>
           <button type="submit" id="salvar">
@@ -164,6 +174,16 @@ include('../DatabaseConect/conexao.php');
           </button>
         </div>
       </form>
+    </div>
+
+    <div id="excluirLista">
+      <div id="containerExcluirLista">
+        <h2>Você tem certeza que quer excluir?</h2>
+        <div id="botoesExcluir">
+          <button class="excluirJogo">Excluir</button>
+          <button class="cancelarAcao">Cancelar</button>
+        </div>
+      </div>
     </div>
   </main>
 

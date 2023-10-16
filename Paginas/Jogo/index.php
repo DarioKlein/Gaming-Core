@@ -13,6 +13,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
   $nomeJogo = $_GET['nome'];
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +44,11 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
   <main>
     <div class="line-full"></div>
+
+    <div class="cardDeAviso">
+      <h2>Jogo Adicionado</h2>
+      <hr id="linhaEfeito">
+    </div>
     <?php
     $genero_atual = "";
     $nome_jogo_atual = "";
@@ -140,8 +146,29 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
            ' . $row_div["curiosidade"] . '
           </p>
         </div>
+        ';
 
-        <div class="button">
+        $sqlLista = "SELECT * FROM actionsLista WHERE jogo = '$nome_jogo_atual' AND username = '$username'";
+        $resultLista = $conn->query($sqlLista);
+
+        if ($resultLista->num_rows > 0) {
+          echo '<div class="button">
+          <button
+            id="removeJogosLista"
+            nomeDoUsuario="' . $username . '"
+            nomeDoJogo="' . $nome_jogo_atual . '" 
+            onclick = "removeLista()"
+          >
+            
+            Remover Jogo
+            <img src="extraAndImg-jogo/icons/remove.svg" alt="" />
+          </button>
+          <p>Remova o jogo da lista</p>
+          <p>Comente sobre os jogos</p>
+        </div>';
+
+         } else {
+          echo '<div class="button">
           <button
             id="adicionaJogosLista"
             nomeDoUsuario="' . $username . '"
@@ -153,8 +180,13 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
           </button>
           <p>Adicione mais jogos a lista</p>
           <p>Comente sobre os jogos</p>
-        </div>
+        </div>';
 
+
+         }
+
+
+        echo '
         <div class="button2">
           <a href="#jogos-explore">
             Ver <img src="extraAndImg-jogo/icons/add.svg" alt="" /> jogos do gênero
@@ -185,6 +217,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
           <h2><span>|</span>Explorar mais</h2>
         </div>
         <?php
+
         $offset = isset($_GET['offset']) ? (int)$_GET['offset'] : 0;
         $sql_2 = "SELECT * FROM jogos ORDER BY RAND() LIMIT $offset, 4";
         $result = $conn->query($sql_2);

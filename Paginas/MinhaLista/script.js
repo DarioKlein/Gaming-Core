@@ -14,15 +14,52 @@ function validarNota(input) {
 const buttonsEdit = document.querySelectorAll(".edit-button")
 
 buttonsEdit.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const editarLista = document.getElementById("editarLista")
     editarLista.style.display = "flex"
+    const index = event.target.getAttribute("index") // Converte para número
+    const gameName = document.getElementById(`gameName${index}`).textContent
+    const inputGame = document.getElementById("gameName")
+    inputGame.value = gameName
   })
 })
 
-const cancelar = document.getElementById("cancelar")
-cancelar.addEventListener('click', ()=> {
-  const editarLista = document.getElementById("editarLista")
-  editarLista.style.display = "none"
+const buttonsEdit2 = document.querySelectorAll(".edit-button2")
+
+buttonsEdit2.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const editarLista = document.getElementById("editarLista")
+    editarLista.style.display = "flex"
+    const index = event.target.getAttribute("index") // Converte para número
+    const h2Element = document.getElementById(`gameName2${index}`)
+    const gameName = h2Element.childNodes[1].textContent.trim()
+    const inputGame = document.getElementById("gameName")
+    inputGame.value = gameName
+  })
 })
 
+const cancelar = document.querySelectorAll(".cancelarAcao")
+cancelar.forEach((button) => {
+  button.addEventListener("click", () => {
+    const editarLista = document.getElementById("editarLista")
+    const excluirLista = document.getElementById("excluirLista")
+    editarLista.style.display = "none"
+    excluirLista.style.display = "none"
+  })
+})
+
+const buttonsExcluir = document.querySelectorAll(".remove-button")
+buttonsExcluir.forEach((button) => {
+  button.addEventListener("click", () => {
+    const excluirLista = document.getElementById("excluirLista")
+    excluirLista.style.display = "flex"
+  })
+})
+
+const buttonsExcluir2 = document.querySelectorAll(".remove-button2")
+buttonsExcluir2.forEach((button) => {
+  button.addEventListener("click", () => {
+    const excluirLista = document.getElementById("excluirLista")
+    excluirLista.style.display = "flex"
+  })
+})

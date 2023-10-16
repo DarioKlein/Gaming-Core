@@ -140,27 +140,27 @@ $conn->close();
 
     <div id="secondPerfil">
       <div id="minha-lista">
-        <h2>JOGOS FAVORITOS</h2>
+        <h2>MELHORES AVALIAÇÕES</h2>
         <div id="exibir-cards">
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+          <?php
+          include('../DatabaseConect/conexao.php');
+          $sqlJogosFavorios = "SELECT * FROM actionslista WHERE username = '$nomeUsuario' ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS UNSIGNED) END DESC LIMIT 5";
+          $resultJogosFavoritos = $conn->query($sqlJogosFavorios);
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+          if ($resultJogosFavoritos->num_rows > 0) {
 
-          <div class="cardsList">
-            <img src="../Jogo/extraAndImg-jogo/imgPrincipal/cyberpunk.jpg" alt="">
-            <span class="nota">Nota: 8.9</span>
-          </div>
+            while ($rowFavoritos = $resultJogosFavoritos->fetch_assoc()) {
+              echo ' <div class="cardsList">
+            <img src="' . $rowFavoritos["imagem"] . '" alt="">
+            <span class="nota">Nota: ' . $rowFavoritos["nota"] . '</span>
+          </div>';
+            }
+          } else {
+            echo '<h3 id="naoTemJogo">Este usuário não possui avaliações.</h2>';
+          }
+
+          ?>
 
 
         </div>
