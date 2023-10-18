@@ -164,7 +164,7 @@ $conn->close();
 
 
         </div>
-        <a href="">Ver Lista</a>
+        <a href="../OutraLista/index.php?nomeUsuario=<?php echo $nomeUsuario ?>">Ver Lista</a>
       </div>
     </div>
   </main>

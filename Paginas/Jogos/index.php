@@ -178,6 +178,19 @@ $genreFilter = $_GET['genre'] ?? '';
 
             include '../DatabaseConect/conexao.php';
 
+            function obterNotaDoJogo($conn, $cod_jogo)
+            {
+                $sqlNota = "SELECT nota FROM games WHERE cod_jogo = $cod_jogo";
+                $resultNota = $conn->query($sqlNota);
+
+                if ($resultNota->num_rows > 0) {
+                    $rowNota = $resultNota->fetch_assoc();
+                    return $rowNota["nota"];
+                } else {
+                    return "N/A"; // Ou qualquer outro valor padrão
+                }
+            }
+
             $genreFilter = $_GET['genre'] ?? '';
             $sort = $_GET['sort'] ?? '';
             $searchQuery = $_POST['search_query'] ?? '';
@@ -200,41 +213,42 @@ $genreFilter = $_GET['genre'] ?? '';
 
             if ($result_div->num_rows > 0) {
                 while ($row_div = $result_div->fetch_assoc()) {
+                    $cod_jogo = $row_div["cod_jogo"];
+                    $nota = obterNotaDoJogo($conn, $cod_jogo); // Função para obter a nota do jogo
+
                     echo '
-                    <a href="' . $row_div["endereco"] . '";>
-                    <div class="mobile-cards">
-                    <div class="img-mobile">
-                        <img src="'  . $row_div["imagem"] . '" alt="' . $row_div["nome"] .    '">
-                    </div>
-                    <div class="texto-lateral-mobile">
-                        <div class="favorito-mobile">
-                            <button class="fav" id="favoritoMobile' . $row_div["cod_jogo"] . '" onclick="favoritar(' . $row_div["cod_jogo"] . ')"> <img src="extra-jogos
-                            /fav.svg" id="imgMobileFav' . $row_div["cod_jogo"] . '" alt=""> </button>
-                        </div>
-                        <div class="title-mobile">
-                            <h2>
-                            ' . $row_div["nome"] .  '
-                            </h2>
-                        </div>
-                        <div class="avaliacao-mobile">
-                            <p>
-                            <img src="extra-jogos
-                            /star.svg" alt=""> Avaliação:  <span>  '  . $row_div["nota"] . ' </span>
-                            </p>
-                        </div>
-                        <div class="espaco-mobile"> </div>
-    
-                        <div class="botao-mobile2">
-                            <button>
-                                + Lista Jogar
-                            </button>
-                        </div>
-                    </div>
-    
-                </div>
-                </a>';
+        <a href="' . $row_div["endereco"] . '";>
+        <div class="mobile-cards">
+        <div class="img-mobile">
+            <img src="' . $row_div["imagem"] . '" alt="' . $row_div["nome"] . '">
+        </div>
+        <div class="texto-lateral-mobile">
+            <div class="favorito-mobile">
+                <button class="fav" id="favoritoMobile' . $cod_jogo . '" onclick="favoritar(' . $cod_jogo . ')"> <img src="extra-jogos/fav.svg" id="imgMobileFav' . $cod_jogo . '" alt=""> </button>
+            </div>
+            <div class="title-mobile">
+                <h2>
+                ' . $row_div["nome"] .  '
+                </h2>
+            </div>
+            <div class="avaliacao-mobile">
+                <p>
+                <img src="extra-jogos/star.svg" alt=""> Avaliação:  <span>  '  . $nota . ' </span>
+                </p>
+            </div>
+            <div class="espaco-mobile"> </div>
+
+            <div class="botao-mobile2">
+                <button>
+                    + Lista Jogar
+                </button>
+            </div>
+        </div>
+    </div>
+    </a>';
                 }
             } else {
+                // Não há resultados
             }
             ?>
         </div>

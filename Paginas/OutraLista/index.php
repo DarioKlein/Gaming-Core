@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if (isset($_GET['nomeUsuario'])) {
+  $nomeUsuario = $_GET['nomeUsuario'];
+} else {
+  header("Location: ../PerfilUsuario/index.php");
+  exit();
+}
+
 if (!isset($_SESSION['username']) && isset($_SESSION['imgPerfil'])) {
   header("Location: ../../Login_Cadastro/Login/login.php");
   exit();
@@ -19,7 +27,7 @@ include('../DatabaseConect/conexao.php');
   include('../Template/references/ref.php');
   ?>
 
-  <title>Minha Lista</title>
+  <title><?php echo $nomeUsuario ?> - Lista </title>
 
   <link rel="stylesheet" href="../Template/Footer/style.css" />
   <link rel="stylesheet" href="../Template/Navbar/style.css" />
@@ -38,12 +46,12 @@ include('../DatabaseConect/conexao.php');
   <div id="espaco"></div>
   <main>
     <div class="titulo-geral">
-      <h1 id="title"><span>|</span>Minha Lista</h1>
+      <h1 id="title"><span>|</span>Lista do <?php echo $nomeUsuario ?></h1>
     </div>
 
     <div id="pesquisasTotal">
       <div class="botao-pesquisa">
-        <form method="POST" action="index.php">
+        <form method="POST" action="index.php?nomeUsuario=<?php echo $nomeUsuario ?>">
           <input type="text" id="btn-pesquisa" name="search_query">
           <div class="imagem-pesquisa">
             <img src="./490px-Magnifying_glass_icon.svg.svg" id="image-search" alt="">
@@ -62,16 +70,15 @@ include('../DatabaseConect/conexao.php');
         <h2 class="style-container coloringTitles">Título da Obra</h2>
         <h2 class="style-container coloringTitles">Nota</h2>
         <h2 class="style-container coloringTitles">Progresso</h2>
-        <h2 class="style-container coloringTitles">Alterar</h2>
       </div>
 
       <?php
       $searchQuery = $_POST['search_query'] ?? '';
       if (!empty($searchQuery)) {
         $searchQuery = mysqli_real_escape_string($conn, $searchQuery);
-        $sql = "SELECT * FROM actionsLista where username = '$username' AND jogo LIKE '%$searchQuery%'";
+        $sql = "SELECT * FROM actionsLista where username = '$nomeUsuario' AND jogo LIKE '%$searchQuery%'";
       } else {
-        $sql = "SELECT * FROM actionsLista where username = '$username'";
+        $sql = "SELECT * FROM actionsLista where username = '$nomeUsuario'";
       }
 
       $result = $conn->query($sql);
@@ -88,8 +95,6 @@ include('../DatabaseConect/conexao.php');
             <p class="style-container notajogo">' . $row['nota'] . '</p>
             <p class="style-container progress">' . $row['progresso'] . '</p>
             <div class="style-container buttonsEditar">
-            <button index=' . $contador . ' class="edit-button"></button>
-            <button numerador=' . $contador . ' class="remove-button"></button>
             </div>
           </div>
            ';
@@ -99,7 +104,7 @@ include('../DatabaseConect/conexao.php');
       } else {
         echo '
         <div id="naoTemJogo">
-          <h2>Você ainda não tem nenhum jogo adicionado <img src="sad.svg"> </h2>
+          <h2>Jogo não encontrado<img src="sad.svg"> </h2>
         </div>
           ';
       }
@@ -113,9 +118,9 @@ include('../DatabaseConect/conexao.php');
       $searchQuery = $_POST['search_query'] ?? '';
       if (!empty($searchQuery)) {
         $searchQuery = mysqli_real_escape_string($conn, $searchQuery);
-        $sql2 = "SELECT * FROM actionsLista where username = '$username' AND jogo LIKE '%$searchQuery%'";
+        $sql2 = "SELECT * FROM actionsLista where username = '$nomeUsuario' AND jogo LIKE '%$searchQuery%'";
       } else {
-        $sql2 = "SELECT * FROM actionsLista where username = '$username'";
+        $sql2 = "SELECT * FROM actionsLista where username = '$nomeUsuario'";
       }
 
       // Execute a consulta SQL
@@ -131,7 +136,6 @@ include('../DatabaseConect/conexao.php');
               <img src="' . $row2['imagem'] . '" alt="">
               <p><span>Nota:</span>' . $row2['nota'] . '</p>
               <p id="progresso-mobile"><span>Progresso:</span>' . $row2['progresso'] . '</p>
-              <p>Alterar: <button index=' . $contador2 . ' class="edit-button2"></button> <button numerador=' . $contador2 . ' class="remove-button2"></button</p>
             </div>
           ';
 
@@ -140,56 +144,11 @@ include('../DatabaseConect/conexao.php');
       } else {
         echo '
         <div id="naoTemJogo">
-          <h2>Você ainda não tem nenhum jogo adicionado <img src="sad.svg"> </h2>
+          <h2>Jogo não encontrado<img src="sad.svg"> </h2>
         </div>
           ';
       }
       ?>
-    </div>
-
-    <div id="editarLista">
-      <form class="editItems" id="editarInputs" method="POST" action="functions/atualizarLista.php">
-        <input type="hidden" id="gameName" name="data-game-name" value="">
-        <input type="hidden" name="username" value="<?php echo $username; ?>">
-        <h2>EDITAR</h2>
-        <div id="alterarCampos">
-          <div id="inputNota">
-            <label for="nota">Sua nota: </label>
-            <input type="text" name="nota" id="nota" maxlength="2" oninput="validarNota(this)" require>
-          </div>
-
-          <input type="radio" id="radio1" name="status" value="Já Zerei">
-          <label class="radioPersonalizado" for="radio1"><span class="itemsInput">Já Zerei</span></label>
-
-
-          <input type="radio" id="radio2" name="status" value="Estou Jogando">
-          <label class="radioPersonalizado" for="radio2"><span class="itemsInput">Estou Jogando</span></label>
-
-          <input type="radio" id="radio3" name="status" value="Quero Jogar" checked>
-          <label class="radioPersonalizado" for="radio3"><span class="itemsInput">Quero Jogar</span></label>
-
-          <input type="radio" id="radio4" name="status" value="100%">
-          <label class="radioPersonalizado" for="radio4"><span class="itemsInput">100%</span></label>
-        </div>
-        <div class="buttons">
-          <button type="button" id="cancelar" class="cancelarAcao">
-            Cancelar
-          </button>
-          <button type="submit" id="salvar">
-            Salvar
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <div id="excluirLista">
-      <div id="containerExcluirLista">
-        <h2>Você tem certeza que quer excluir?</h2>
-        <div id="botoesExcluir">
-          <button data-NomeDoJogo="" data-username="<?php echo $username ?>" class="excluirJogo" id="removerDaLista">Excluir</button>
-          <button class="cancelarAcao">Cancelar</button>
-        </div>
-      </div>
     </div>
   </main>
 

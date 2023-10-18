@@ -50,16 +50,45 @@ cancelar.forEach((button) => {
 
 const buttonsExcluir = document.querySelectorAll(".remove-button")
 buttonsExcluir.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const excluirLista = document.getElementById("excluirLista")
     excluirLista.style.display = "flex"
+    const numerador = event.target.getAttribute("numerador")
+    const gameName = document.getElementById(`gameName${numerador}`).textContent
+    const removerDaLista = document.getElementById("removerDaLista")
+    removerDaLista.setAttribute("data-NomeDoJogo", gameName)
   })
 })
 
 const buttonsExcluir2 = document.querySelectorAll(".remove-button2")
 buttonsExcluir2.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
     const excluirLista = document.getElementById("excluirLista")
     excluirLista.style.display = "flex"
+    const numerador = event.target.getAttribute("numerador")
+    const gameName = document.getElementById(`gameName${numerador}`).textContent
+    const removerDaLista = document.getElementById("removerDaLista")
+    removerDaLista.setAttribute("data-NomeDoJogo", gameName)
+  })
+})
+
+const excluirDaLista = document.getElementById("removerDaLista")
+excluirDaLista.addEventListener("click", () => {
+  const nomeUsuario = excluirDaLista.getAttribute("data-username")
+  const nomeJogo = excluirDaLista.getAttribute("data-NomeDoJogo")
+
+  $.ajax({
+    type: "POST",
+    url: "functions/removerLista.php",
+    data: {
+      nomeJogo: nomeJogo,
+      nomeUsuario: nomeUsuario,
+    },
+    success: function () {
+      location.reload()
+    },
+    error: function (error) {
+      console.error("Erro ao enviar dados: " + error.responseText)
+    },
   })
 })

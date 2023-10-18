@@ -289,7 +289,7 @@ $anoCriacao = $_SESSION['anoCriacao'];
           ?>
 
         </div>
-        <a href="">Ver Lista</a>
+        <a href="../OutraLista/index.php?nomeUsuario=<?php echo $username ?>">Ver Lista</a>
       </div>
     </div>
   </main>

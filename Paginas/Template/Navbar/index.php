@@ -9,7 +9,7 @@
                  <ul>
                      <li> <a href="../Home/index.php"> <img class="icones-mobile" src="../Template/Navbar/imgs-navbar/home.svg" alt=""> Início</a></li>
                      <li> <a href="../Jogos/index.php"><img class="icones-mobile" src="../Template/Navbar/imgs-navbar/controle.svg" alt=""> Jogos</a></li>
-                     <li> <a href="../Ranking/ranking.php"><img class="icones-mobile" src="../Template/Navbar/imgs-navbar/ranking.svg" alt=""> Ranking</a></li>
+                     <li> <a href="../Ranking/index.php"><img class="icones-mobile" src="../Template/Navbar/imgs-navbar/ranking.svg" alt=""> Ranking</a></li>
                      <li><a href="../Suporte/index.php"><img class="icones-mobile" src="../Template/Navbar/imgs-navbar/suporte.svg" alt=""> Suporte</a></li>
                  </ul>
              </div>

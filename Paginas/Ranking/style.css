@@ -1,0 +1,339 @@
+#espaco {
+  height: 4.4rem;
+}
+
+main {
+  min-height: 100vh;
+  padding: 6rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-geral {
+  width: 100%;
+}
+
+#title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+}
+
+#title > span {
+  color: #00ff80;
+  font-size: 2.7rem;
+}
+
+#list-mobile {
+  display: none;
+}
+
+#list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  color: white;
+  margin-top: 3rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 0 1rem 0 black;
+}
+
+.titulos-container {
+  display: flex;
+  font-size: 1.3rem;
+  gap: 0.2rem;
+  height: 4rem;
+  border-bottom: 0.2rem solid #1c1c1c;
+}
+
+.coloringTitles {
+  background-color: black;
+  color: #00ff80;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+}
+
+.style-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.style-container:nth-child(1),
+.style-container:nth-child(4) {
+  width: 8%;
+}
+
+.style-container:nth-child(2) {
+  width: 15%;
+}
+
+.style-container:nth-child(3) {
+  width: 46%;
+}
+
+.style-container:nth-child(5) {
+  width: 31%;
+}
+
+.cards {
+  display: flex;
+  gap: 0.2rem;
+  height: 8rem;
+  align-items: center;
+  background-color: black;
+  border-bottom: 0.2rem solid #1c1c1c;
+}
+
+.cards:last-child {
+  border: none;
+}
+
+.idJogo {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.imgJogo {
+  height: 7rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.titleJogo {
+  font-size: 1.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.notajogo {
+  font-size: 1.7rem;
+}
+
+.progress {
+  font-size: 1.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+@media (max-width: 980px) {
+  .style-container:nth-child(3) {
+    width: 34%;
+  }
+  .style-container:nth-child(1),
+  .style-container:nth-child(4) {
+    width: 12%;
+  }
+
+  .style-container:nth-child(2) {
+    width: 20%;
+  }
+
+  .style-container:nth-child(5) {
+    width: 28%;
+    font-size: 1.2rem;
+  }
+
+}
+
+
+#pesquisasTotal {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+/* Botão de pesquisa */
+
+.botao-pesquisa {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#btn-pesquisa {
+  background-color: black;
+  width: 35rem;
+  border: 0.2rem solid #00ff80;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  height: 3.2rem;
+  color: white;
+  padding-left: 3.7rem;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+#image-search {
+  width: 100%;
+  height: 100%;
+}
+
+.imagem-pesquisa {
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  margin-top: -2.6rem;
+  background: none;
+}
+
+#btn-pesquisa:focus {
+  border: 0.2rem solid white;
+}
+#pesquisar {
+  height: 3.2rem;
+  border: 0.2rem solid #00ff80;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding-left: 1rem;
+  padding-right: 1.3rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+#pesquisar:hover {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+#linha {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem;
+}
+
+#naoTemJogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+#naoTemJogo > h2 {
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#naoTemJogo h2 > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@keyframes minhaAnimacao {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  #list-container {
+    display: none;
+  }
+
+  .edit-button {
+    text-decoration: none;
+  }
+
+  #list-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cards-mobile {
+    width: 100%;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    border: 0.1rem solid white;
+    box-shadow: 0 0 1rem 0.5rem black;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    background: #00000070;
+  }
+  .cards-mobile > h2 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards-mobile > h2 > span {
+    color: #00ff80;
+  }
+
+  .cards-mobile > p {
+    font-size: 1.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .cards-mobile > p > span {
+    color: #00ff80;
+    padding-right: 1rem;
+  }
+  
+  .cards-mobile > img {
+    border-radius: 1rem;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #progresso-mobile {
+    margin-top: -1rem;
+  }
+
+  #pesquisasTotal {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  #btn-pesquisa {
+    width: 25rem;
+  }
+}

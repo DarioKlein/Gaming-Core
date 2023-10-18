@@ -274,7 +274,7 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 95%;
+    padding-right: 1.3rem;
 }
 
 .card1 p {

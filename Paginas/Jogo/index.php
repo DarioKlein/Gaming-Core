@@ -218,14 +218,27 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
         </div>
         <?php
 
+        function obterNotaDoJogo($conn, $cod_jogo)
+        {
+          $sqlNota = "SELECT nota FROM games WHERE cod_jogo = $cod_jogo";
+          $resultNota = $conn->query($sqlNota);
+
+          if ($resultNota->num_rows > 0) {
+            $rowNota = $resultNota->fetch_assoc();
+            return $rowNota["nota"];
+          } else {
+            return "N/A"; // Ou qualquer outro valor padrão
+          }
+        }
+
         $offset = isset($_GET['offset']) ? (int)$_GET['offset'] : 0;
         $sql_2 = "SELECT * FROM jogos ORDER BY RAND() LIMIT $offset, 4";
         $result = $conn->query($sql_2);
-
         if ($result->num_rows > 0) {
           $cardsExibidos = 0;
           echo '<div id="card-container" class="card-explore">';
           while ($row_div2 = $result->fetch_assoc()) {
+            $nota = obterNotaDoJogo($conn, $row_div2['cod_jogo']);
             if ($row_div2["nome"] !== $nome_jogo_atual) {
               echo '
               <div class="cards">
@@ -239,7 +252,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
                 </div>
 
                 <div class="notas-cards">
-                  <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" /> ' . $row_div2["nota"] . '</p>
+                  <p><img id="star-cards" src="extraAndImg-jogo/icons/star.svg" alt="" /> ' . $nota . '</p>
                 </div>
 
                 <a href="' . $row_div2["endereco"] . '">
@@ -265,7 +278,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
                   <div class="avaliacao-mobile">
                     <img src="extraAndImg-jogo/icons/star.svg" alt="" />
-                    <p>' . $row_div2["nota"] . '</p>
+                    <p>'. $nota .'</p>
                   </div>
                   <button class="add-mobile">
                     <img class="add-mobile" src="extraAndImg-jogo/icons/add.svg" alt="" /> Adicionar
