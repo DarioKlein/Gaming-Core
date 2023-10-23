@@ -1,4 +1,5 @@
 <?php
+include '../DatabaseConect/conexao.php';
 session_start();
 if (!isset($_SESSION['username']) && isset($_SESSION['imgPerfil'])) {
     header("Location: ../../Login_Cadastro/Login/login.php");
@@ -6,6 +7,23 @@ if (!isset($_SESSION['username']) && isset($_SESSION['imgPerfil'])) {
 }
 $username = $_SESSION['username'];
 $avatar = $_SESSION['imgPerfil'];
+
+$sql = "SELECT nome, nota from games";
+$result = $conn->query($sql);
+
+$notasDosJogos = array();
+
+// Verificar se a consulta retornou resultados
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $nomeDoJogo = $row["nome"];
+        $notaDoJogo = $row["nota"];
+        $notasDosJogos[$nomeDoJogo] = $notaDoJogo;
+    }
+}
+
+// Fechar a conexão com o banco de dados
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +84,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
 
                     <div class="textos2">
-                        <p>Avaliação dos usuários em: <span>8.1</span></p>
+                        <p>Avaliação dos usuários em: <span><?php echo $notasDosJogos['Hogwarts Legacy']; ?></span></p>
                     </div>
 
                     <div class="textos3">
@@ -111,7 +129,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
 
                     <div class="textos2">
-                        <p class="texto">Avaliação dos usuários em: <span>7.9</span></p>
+                        <p class="texto">Avaliação dos usuários em: <span><?php echo $notasDosJogos['Cyberpunk 2077']; ?></span></p>
                     </div>
 
                     <div class="textos3">
@@ -157,7 +175,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
 
                     <div class="textos2">
-                        <p class="texto">Avaliação dos usuários em: <span>9.1</span></p>
+                        <p class="texto">Avaliação dos usuários em: <span><?php echo $notasDosJogos['Resident Evil 4 Remake']; ?></span></p>
                     </div>
 
                     <div class="textos3">
@@ -203,7 +221,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
 
                     <div class="textos2">
-                        <p class="texto">Avaliação dos usuários em: <span>8.9</span></p>
+                        <p class="texto">Avaliação dos usuários em: <span><?php echo $notasDosJogos['Dead Space Remake']; ?></span></p>
                     </div>
 
                     <div class="textos3">
@@ -261,7 +279,7 @@ $avatar = $_SESSION['imgPerfil'];
 
 
                     <div class="mobile-textos">
-                        <p>Avaliação dos usuários em: <span>8.1</span></p>
+                        <p>Avaliação dos usuários em: <span><?php echo $notasDosJogos['Hogwarts Legacy']; ?></span></p>
                     </div>
 
                     <div class="mobile-plataformas">
@@ -303,7 +321,7 @@ $avatar = $_SESSION['imgPerfil'];
 
                     </div>
                     <div class="mobile-textos">
-                        <p>Avaliação dos usuários em: <span>7.9</span></p>
+                        <p>Avaliação dos usuários em: <span><?php echo $notasDosJogos['Cyberpunk 2077']; ?></span></p>
                     </div>
 
                     <div class="mobile-plataformas">
@@ -349,7 +367,7 @@ $avatar = $_SESSION['imgPerfil'];
 
 
                     <div class="mobile-textos">
-                        <p>Avaliação dos usuários em: <span>9.1</span></p>
+                        <p>Avaliação dos usuários em: <span><?php echo $notasDosJogos['Resident Evil 4 Remake']; ?></span></p>
                     </div>
 
                     <div class="mobile-plataformas">
@@ -394,7 +412,7 @@ $avatar = $_SESSION['imgPerfil'];
 
 
                     <div class="mobile-textos">
-                        <p>Avaliação dos usuários em: <span>8.9</span></p>
+                        <p>Avaliação dos usuários em: <span><?php echo $notasDosJogos['Dead Space Remake']; ?></span></p>
                     </div>
 
                     <div class="mobile-plataformas">
@@ -1261,7 +1279,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.1
+                        <?php echo $notasDosJogos['Resident Evil 4 Remake']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1292,7 +1310,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        8.2
+                        <?php echo $notasDosJogos['Hogwarts Legacy']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1325,7 +1343,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        10.0
+                        <?php echo $notasDosJogos['Red Dead Redemption 2']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1358,7 +1376,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.8
+                        <?php echo $notasDosJogos['Grand Theft Auto V']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1396,7 +1414,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.6
+                        <?php echo $notasDosJogos['The Witcher 3: Wild Hunt']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1428,7 +1446,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        8.9
+                        <?php echo $notasDosJogos['Forza Horizon 5']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1460,7 +1478,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.7
+                        <?php echo $notasDosJogos['Sekiro: Shadows Die Twice']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1492,7 +1510,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.3
+                        <?php echo $notasDosJogos['Elden Ring']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1529,7 +1547,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        8.8
+                        <?php echo $notasDosJogos['Dark Souls III']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1561,7 +1579,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        7.8
+                        <?php echo $notasDosJogos['Assassins Creed Valhalla']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1593,7 +1611,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        6.9
+                        <?php echo $notasDosJogos['Cyberpunk 2077']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1625,7 +1643,7 @@ $avatar = $_SESSION['imgPerfil'];
                         <img src="extras/star.svg" alt="">
                     </div>
                     <h2>
-                        9.6
+                        <?php echo $notasDosJogos['The Last of Us Part II']; ?>
                     </h2>
                 </div>
                 <div class="data-card_v2">
@@ -1669,7 +1687,7 @@ $avatar = $_SESSION['imgPerfil'];
                     <div class="avaliacao-mobile">
                         <p>
                             <img src="extras/star.svg" alt="" style="width: 1.2rem;">
-                            Avaliação: <span>9.1</span>
+                            Avaliação: <span><?php echo $notasDosJogos['Resident Evil 4 Remake']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1701,7 +1719,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>8.2</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Hogwarts Legacy']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1732,7 +1750,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>10.0</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Red Dead Redemption 2']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1764,7 +1782,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>9.8</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Grand Theft Auto V']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1796,7 +1814,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>9.6</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['The Witcher 3: Wild Hunt']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1828,7 +1846,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>8.9</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Forza Horizon 5']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1860,7 +1878,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>9.7</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Sekiro: Shadows Die Twice']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
@@ -1892,7 +1910,7 @@ $avatar = $_SESSION['imgPerfil'];
                     </div>
                     <div class="avaliacao-mobile">
                         <p>
-                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span>9.3</span>
+                            <img src="extras/star.svg" alt="" style="width: 1.2rem;"> Avaliação: <span><?php echo $notasDosJogos['Elden Ring']; ?></span>
                         </p>
                     </div>
                     <div class="espaco-mobile"> </div>
