@@ -30,8 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
     }
 
-    $somaNotas = array_sum($notaJogo);
-    $mediaNotaJogo = round($somaNotas / count($notaJogo), 1);
+    if (count($notaJogo) > 0) {
+      $somaNotas = array_sum($notaJogo);
+      $mediaNotaJogo = round($somaNotas / count($notaJogo), 1);
+    } else {
+      $mediaNotaJogo = 'N.A';
+    }
+    
     $sqlNota = "UPDATE games SET nota = '$mediaNotaJogo' WHERE nome = '$gameName'";
     if ($conn->query($sqlNota) === TRUE) {
       header("Location: ../index.php");

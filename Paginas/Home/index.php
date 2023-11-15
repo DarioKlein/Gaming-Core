@@ -1289,7 +1289,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=6&nome=RE%204%20Remake"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=6&nome=RE%204%20Remake"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1320,7 +1320,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=4&nome=Hogwarts%20Legacy"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=4&nome=Hogwarts%20Legacy"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1353,7 +1353,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=2&nome=Red%20Dead%20Redemption%202"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=2&nome=Red%20Dead%20Redemption%202"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1386,7 +1386,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=3&nome=GTA%20V"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=3&nome=GTA%20V"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1424,7 +1424,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=1&nome=The%20Witcher%203"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=1&nome=The%20Witcher%203"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1456,7 +1456,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=24&nome=Forza%20Horizon%205"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=24&nome=Forza%20Horizon%205"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1488,7 +1488,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=25&nome=Sekiro:%20Shadows%20Die%20Twice"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=25&nome=Sekiro:%20Shadows%20Die%20Twice"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1520,7 +1520,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=21&nome=Elden%20Ring"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=21&nome=Elden%20Ring"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1557,7 +1557,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=7&nome=Dark%20Souls%20III"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=7&nome=Dark%20Souls%20III"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1589,7 +1589,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=26&nome=Assassin's%20Creed%20Valhalla"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=26&nome=Assassin's%20Creed%20Valhalla"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1621,7 +1621,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=5&nome=Cyberpunk%202077"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=5&nome=Cyberpunk%202077"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1653,7 +1653,7 @@ $conn->close();
                 </div>
                 <div class="button-card2_v2">
                     <button>
-                        <a href="../Jogo/index.php?idJogo=22&nome=The%20Last%20of%20Us%20Part%20II"> + Lista <span>Jogar</span></a>
+                        <a href="../Jogo/index.php?idJogo=22&nome=The%20Last%20of%20Us%20Part%20II"> Ver Mais</a>
                     </button>
                 </div>
                 <div class="button-card_v2">
@@ -1694,7 +1694,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1726,7 +1726,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1757,7 +1757,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1789,7 +1789,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1821,7 +1821,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1853,7 +1853,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1885,7 +1885,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1917,7 +1917,7 @@ $conn->close();
 
                     <div class="botao-mobile2">
                         <button>
-                            + Lista Jogar
+                            Ver Mais
                         </button>
                     </div>
                 </div>
@@ -1954,7 +1954,7 @@ $conn->close();
         </div>
 
         <div class="button-monte">
-            <a href="registro.php"> Ver Lista</a>
+            <a href="../MinhaLista/index.php"> Ver Lista</a>
         </div>
 
         <div class="espacamento-banner"></div>

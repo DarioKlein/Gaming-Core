@@ -74,7 +74,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
   
         <div class="avaliacao" id="av2">
           <h2>Faça sua avaliação</h2>
-          <a href=""
+          <a href="../MinhaLista/index.php"
             ><img src="extraAndImg-jogo/icons/star-user.svg" alt="" />
             <p>Avaliar</p>
           </a>
@@ -278,11 +278,9 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
 
                   <div class="avaliacao-mobile">
                     <img src="extraAndImg-jogo/icons/star.svg" alt="" />
-                    <p>'. $nota .'</p>
+                    <p>'. $nota . '</p>
                   </div>
-                  <button class="add-mobile">
-                    <img class="add-mobile" src="extraAndImg-jogo/icons/add.svg" alt="" /> Adicionar
-                  </button>
+                  <p class="dataDeLancamentoJogo">Data: ' . $row_div2["data_lanc"] . ' </p>
                 </div>
               </div>
               </a>
@@ -292,6 +290,7 @@ if (isset($_GET['idJogo']) && isset($_GET['nome'])) {
         }
         ?>
       </div>
+      
       <div class="card-explore" id="explore2"></div>
       <div id="loading-animation">
         <img src="extraAndImg-jogo/icons/loading-gif.gif" alt="Carregando..." />

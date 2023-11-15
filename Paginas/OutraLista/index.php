@@ -104,7 +104,7 @@ include('../DatabaseConect/conexao.php');
       } else {
         echo '
         <div id="naoTemJogo">
-          <h2>Jogo não encontrado<img src="sad.svg"> </h2>
+          <h2>Este usuário ainda não tem nenhum jogo adicionado<img src="sad.svg"> </h2>
         </div>
           ';
       }
@@ -144,7 +144,7 @@ include('../DatabaseConect/conexao.php');
       } else {
         echo '
         <div id="naoTemJogo">
-          <h2>Jogo não encontrado<img src="sad.svg"> </h2>
+          <h2>Este usuário ainda não tem nenhum jogo adicionado<img src="sad.svg"> </h2>
         </div>
           ';
       }
