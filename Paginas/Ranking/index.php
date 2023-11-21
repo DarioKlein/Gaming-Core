@@ -54,7 +54,8 @@ include('../DatabaseConect/conexao.php');
       </div>
 
       <?php
-      $sql = "SELECT * FROM games ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS UNSIGNED) END DESC";
+      $sql = "SELECT * FROM games ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS DECIMAL(5,1)) END DESC";
+
       $result = $conn->query($sql);
 
       // Verifique se há resultados
@@ -90,7 +91,7 @@ include('../DatabaseConect/conexao.php');
 
       <?php
 
-      $sql2 = "SELECT * FROM games ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS UNSIGNED) END DESC";
+      $sql2 = "SELECT * FROM games ORDER BY CASE WHEN nota = 'N.A.' THEN 0 ELSE CAST(nota AS DECIMAL(5,1)) END DESC";
       // Execute a consulta SQL
       $result2 = $conn->query($sql2);
 
